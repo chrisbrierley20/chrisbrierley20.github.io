@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Cumulative second doses issued back home and at university",
+    "subtitle": "Data hosted from GitHub repository",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "white",
+    "subtitleColor": "white"
+  },
+  "config": {"background": "#122b39", "view": {"stroke": "transparent"}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/cum_second_jab.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": {"type": "line", "point": false},
+  "transform": [
+    {
+      "filter": {
+        "field": "areaName",
+        "oneOf": ["Bristol, City of", "Mid Sussex", "Brighton and Hove"]
+      }
+    }
+  ],
+  "height": 300,
+  "width": 310,
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "grid": false,
+        "domainColor": "white",
+        "labelColor": "white",
+        "tickColor": "white",
+        "gridColor": "white"
+      }
+    },
+    "y": {
+      "field": "cumPeopleVaccinatedSecondDoseByVaccinationDate",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "grid": false,
+        "domainColor": "white",
+        "labelColor": "white",
+        "tickColor": "white",
+        "gridColor": "white"
+      }
+    },
+    "color": {
+      "field": "areaName",
+      "type": "nominal",
+      "scale": {"scheme": "set1"},
+      "title": "",
+      "legend": {
+        "orient": "top-left",
+        "fillColor": "#122b39",
+        "labelColor": "white"
+      }
+    }
+  }
+}
