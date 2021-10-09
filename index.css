@@ -39,7 +39,7 @@
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 body{
-    background-color: rgb(38, 101, 228);
+    background-color: rgb(20, 89, 229);
     max-width: 550px;
     margin: auto;
 }
@@ -50,11 +50,11 @@ h1, h3, p{
 }
 
 .chart{
-    background-color: rgb(38, 101, 228);
+    background-color: rgb(20, 89, 229;
     width: 550px;
     border-width: 1px;
     border-style: solid;
     border-radius: 5px;
-    border-color: rgb(38, 101, 228);
+    border-color: rgb(20, 89, 229);
 }
 
