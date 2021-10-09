@@ -5,22 +5,22 @@
 /* This is my first proper css file */
 
 body{
-    background-color: rgb(252, 222, 103);
+    background-color: rgb(14, 11, 22);
     max-width: 550px;
     margin: auto;
 }
 
 h1, h3, p{
-    color: rgb(3, 14, 18);
+    color: rgb(230, 224, 223);
     font-family: 'Roboto', sans-serif;
 }
 
 .chart{
-    background-color: rgb(252, 222, 103);
+    background-color: rgb(14, 11, 22);
     width:auto;
     border-width: 1px;
     border-style: solid;
     border-radius: 5px;
-    border-color: rgb(91, 205, 246);
+    border-color: rgb(14, 11, 22);
 }
 
