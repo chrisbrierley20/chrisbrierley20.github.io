@@ -56,5 +56,6 @@ h1, h3, p{
     border-style: solid;
     border-radius: 5px;
     border-color: rgb(20, 89, 229);
+    margin: auto;
 }
 
