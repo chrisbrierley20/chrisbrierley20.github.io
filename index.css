@@ -59,3 +59,7 @@ h1, h3, p{
     margin: auto;
 }
 
+container {
+	align-content: center;
+	justify-content: center
+}
