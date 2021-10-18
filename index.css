@@ -4,11 +4,12 @@
 
 /* This is my first proper css file */
 .dropbtn {
-    background-color: #2666e4;
+    background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
     color: white;
     padding: 16px;
     font-size: 16px;
-    border: none;
+    border: 1px solid black;
+    border-color: white;
   }
   
   .dropdown {
@@ -19,7 +20,7 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #1353d1;
+    background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -33,13 +34,18 @@
     display: block;
   }
   
-  .dropdown-content a:hover {background-color: #2477DD;}
+  .dropdown-content a:hover {
+    background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
+    border: 1px solid black;
+    border-color: white;
+  }
   
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background-color: #1353d1;}
+  .dropdown:hover .dropbtn {background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;}
   body{
-      background-color: rgb(20, 89, 229);
+      background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
+      background-size: cover;
       max-width: 550px;
       margin: auto;
   }
@@ -50,11 +56,17 @@
   }
   
   .chart{
-      background-color: rgb(20, 89, 229);
+      background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
       width: 550px;
-      border-width: 1px;
+      border-width: 0px;
       border-style: solid;
       border-radius: 5px;
-      border-color: rgb(20, 89, 229);
       margin: auto;
   }
+
+  .container {
+    background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 

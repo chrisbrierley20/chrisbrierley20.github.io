@@ -1,0 +1,50 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+
+"title": {
+    "text": "UK productivity, 2000-2010",
+    "subtitle":"Labour productivity. Output per hour worked, 2018==100. Source: ONS",
+    "subtitleFontStyle":"italic",
+    "subtitleFontSize":10,
+    "anchor": "start",
+    "color": "black"
+  },
+  
+  "data": {
+    "values": [
+      {"Date": "01/04/2000", "Value": 84.3}, {"Date": "01/04/2001", "Value": 85.5}, {"Date": "01/04/2002", "Value": 88.0},
+      {"Date": "01/04/2003", "Value": 89.9}, {"Date": "01/04/2004", "Value": 92.1}, {"Date": "01/04/2005", "Value": 93.5},
+      {"Date": "01/04/2006", "Value": 95.7}, {"Date": "01/04/2007", "Value": 96.4}, {"Date": "01/04/2008", "Value": 97.6}, 
+      {"Date": "01/04/2009", "Value": 94.7}, {"Date": "01/04/2010", "Value": 96.8}]
+  },
+  "height": 300,
+  "width": 300,
+  "mark": {
+    "type": "line",
+    "point": false,
+    "interpolate": "monotone",
+    "color": "blueviolet"
+  },
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 20,
+        "ticks": false
+      }
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "axis": {
+        "grid": false,
+        "title": "",
+        "labelSeparation": 20,
+        "ticks": false
+      }
+    }
+  }
+}

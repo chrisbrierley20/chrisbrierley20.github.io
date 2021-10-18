@@ -8,6 +8,9 @@ body {
   background-size: cover;
   overflow: hidden;
 }
+h1, h3, p{
+  font-family: 'Epilogue', sans-serif;
+}
 .card {
   display: grid;
   grid-template-columns: 300px;

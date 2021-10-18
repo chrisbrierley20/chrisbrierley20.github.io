@@ -10,7 +10,7 @@
     "subtitleColor": "#179fdb"
   },
   "config": {"background": "#122b39", "view": {"stroke": "transparent"}},
-  "width": 295,
+  "width": 300,
   "height": 300,
   "data": {
     "name": "myData",

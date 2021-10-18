@@ -1,112 +1,54 @@
 <!DOCTYPE html>
-
-<!-- Richard Davies, Data Science 2021 -->
-
-
-<!-- ///////////////////  HEAD //////////////////////////////////// -->
-
-<head>
-  
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chris Brierley's Data Science Portfolio</title>
-
-  <link rel="stylesheet" href="index.css">
-  
-  <style>
-  @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap'); 
-  </style>
-  
-<!--The next three lines allow the Vega embed-->
-<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
-  
-
-</head>
-
-<!-- ///////////////////  HEAD //////////////////////////////////// -->
-
-
-
-<!-- ///////////////////  START BODY //////////////////////////////////// -->
-
-<body>
-
-  <h1>Data Science Portfolio</h1>
-  <p>Chris Brierley</p>
-  
-<div class="dropdown">
-  <button class="dropbtn">Menu</button>
-  <div class="dropdown-content">
-    <a href="index.html">Home</a>
-    <a href="project.html">Project</a>
-    <a href="https://rapidcharts.io/datascience">Data Science Course</a>
-    <a href="https://github.com/chrisbrierley20/chrisbrierley20.github.io/">GitHub Repository</a>
-  </div>
-</div>
-
-<container class="week1">  
-  
-<!--Chart 1 -->
-<h3>Covid-19 Cases</h3>
-<p>This first interactive chart looks at Covid-19 cases across different UK regions.</p>
-<div class="chart" id="chart1">
-      <script>
-        var myChart1 = "chart1_covidUKRegions.json";
-        vegaEmbed('#chart1', myChart1);
-      </script>
-  </div>
-
-<!--Chart 2 -->
-<h3>Productivity</h3>
-<p>The second chart shows how UK labour productivity has changed since 1971.</p>
-<div class="chart" id="chart2">
-    <script>
-      var myChart2 = "chart2_ukProductivity.json";
-      vegaEmbed('#chart2', myChart2);
-    </script>
-  </div>
-
-<!--Chart 3 -->
-<h3>Cryptocurrency</h3>
-<p>This chart presents how the price of ETH has evolved since 2016. Use the sliders to change both the start and end years.</p>
-<div class="chart" id="chart3">
-    <script>
-      var myChart3 = "chart3_ether.json";
-      vegaEmbed('#chart3', myChart3);
-    </script>
-  </div>
-  
-</container> 
-  
-<container class="week2">
-  
-<!--Chart 4 -->
-<h3>Covid-19 Cases - Home & Away</h3>
-<p>This next chart shows how the number of cases of Covid-19 have changed in my hometown, as well as my university area over the course of the pandemic. I coded it to use the UK Government's Coronavirus data API to automatically refresh itself when new data becomes available.</p>
-<div class="chart" id="chart4">
-  <script>
-    var myChart4 = "chart4_API.json";
-    vegaEmbed('#chart4', myChart4);
-  </script>
-</div>
-
-<!--Chart 5 -->
-<h3>Covid-19 Vaccinations</h3>
-<p>Using the same regions as before, this chart now uses raw data saved to my GitHub repository that shows how each region has issued second doses of Covid-19 vaccinations.</p>
-<div class="chart" id="chart5">
-  <script>
-    var myChart5 = "chart5_raw.json";
-    vegaEmbed('#chart5', myChart5);
-  </script>
-</div>
-
-</container>   
-  
-</body>
-
-<!-- /////////////////// END BODY //////////////////////////////////// -->
-
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="test.css" />
+    <style>
+      a:link {
+        text-decoration: underline;
+        color: white;
+      }
+      
+      a:visited {
+        text-decoration: underline;
+        color: white;
+      }
+      
+      a:hover {
+        text-decoration: none;
+        color: white;
+      }
+      
+      a:active {
+        text-decoration: none;
+        color: white;
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap'); 
+      </style>
+  </head>
+  <body>
+    <div class="card rgb">
+      <div class="card-image" ></div>
+      <div class="card-text">
+        <h2><a href="portfolio.html">Portfolio</a></h2>
+        <p>All work that I have completed for my Data Science Portfolio</p>
+      </div>
+    </div>
+    <div class="card rgb">
+      <div class="card-image card2"></div>
+      <div class="card-text card2">
+        <h2><a href="project.html">Project</a></h2>
+        <p>My project for my Data Science unit which looks at the economic impacts of hosting the Olympic Games on host cities</p>
+      </div>
+    </div>
+    <div class="card rgb">
+        <div class="card-image card3"></div>
+        <div class="card-text card3">
+          <h2><a href="https://github.com/chrisbrierley20/chrisbrierley20.github.io">GitHub</a></h2>
+          <p>My GitHub Repository that has all the code, data and charts I used throughout the unit</p>
+        </div>
+    </div>
+  </body>
 </html>
