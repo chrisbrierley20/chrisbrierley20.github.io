@@ -6,10 +6,10 @@
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
-    "color": "white",
-    "subtitleColor": "white"
+    "color": "#FEFEFE",
+    "subtitleColor": "#B3B3B3"
   },
-  "config": {"background": "#122b39", "view": {"stroke": "transparent"}},
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
   "data": {
     "url": "https://api.coronavirus.data.gov.uk/v2/data?areaType=ltla&metric=newCasesByPublishDateRollingRate&format=csv",
     "format": {"type": "csv"}
@@ -32,10 +32,10 @@
       "title": null,
       "axis": {
         "grid": false,
-        "domainColor": "white",
-        "labelColor": "white",
-        "tickColor": "white",
-        "gridColor": "white"
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
       }
     },
     "y": {
@@ -44,10 +44,10 @@
       "title": null,
       "axis": {
         "grid": false,
-        "domainColor": "white",
-        "labelColor": "white",
-        "tickColor": "white",
-        "gridColor": "white"
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
       }
     },
     "color": {
@@ -57,7 +57,7 @@
       "title": "",
       "legend": {
         "orient": "top-left",
-        "fillColor": "#122b39",
+        "fillColor": "#404040",
         "labelColor": "white"
       }
     }

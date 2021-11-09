@@ -12,11 +12,12 @@
     "subtitleFontStyle":"italic",
     "subtitleFontSize":10,
     "anchor": "start",
-    "color": "black"
+    "color": "#FEFEFE",
+    "subtitleColor": "#B3B3B3"
   },
 
 
-
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
   "height": 300,
   "width": 300,
   
@@ -59,11 +60,29 @@
   ],
 
   "encoding": {
-    "x": {"field": "date", "type": "temporal", "title": null},
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
+    },
     "y": {
       "field": "newCasesByPublishDate",
       "type": "quantitative",
-      "title": null
+      "title": null,
+      "axis": {
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
     },
     
       

@@ -6,10 +6,10 @@
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
-    "color": "#179fdb",
-    "subtitleColor": "#179fdb"
+    "color": "#FFFFFF",
+    "subtitleColor": "#B3B3B3"
   },
-  "config": {"background": "#122b39", "view": {"stroke": "transparent"}},
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
   "width": 300,
   "height": 300,
   "data": {
@@ -31,6 +31,7 @@
     {
       "name": "minYear",
       "value": 2016,
+      
       "bind": {
         "input": "range",
         "min": 2016,
@@ -59,10 +60,10 @@
         "title": null,
         "grid": false,
         "labelSeparation": 10,
-        "domainColor": "dimgrey",
-        "labelColor": "#00a767",
-        "tickColor": "pink",
-        "gridColor": "dimgrey"
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
       }
     },
     "y": {
@@ -71,10 +72,10 @@
       "title": "",
       "axis": {
         "grid": false,
-        "domainColor": "dimgrey",
-        "labelColor": "#00a767",
-        "tickColor": "pink",
-        "gridColor": "dimgrey",
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black",
         "format": "$,.5"
       }
     }

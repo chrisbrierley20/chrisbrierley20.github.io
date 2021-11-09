@@ -1,10 +1,11 @@
 .dropbtn {
-    background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
+    background: linear-gradient(#282828, #181818) no-repeat center fixed;
     color: white;
     padding: 16px;
     font-size: 16px;
     border: 1px solid black;
-    border-color: white;
+    border-color: #B3B3B3;
+    font-family: 'Epilogue', sans-serif;
   }
   
   .dropdown {
@@ -17,7 +18,7 @@
     position: absolute;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
+    background: linear-gradient(#282828, #181818) no-repeat center fixed;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -32,16 +33,16 @@
   }
   
   .dropdown-content a:hover {
-    background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
+    background: linear-gradient(#282828, #181818) no-repeat center fixed;
     border: 1px solid black;
     border-color: white;
   }
   
   .dropdown:hover .dropdown-content {display: block;}
   
-  .dropdown:hover .dropbtn {background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;}
+  .dropdown:hover .dropbtn {background: linear-gradient(#282828, #181818) no-repeat center fixed;}
   body{
-      background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
+      background: linear-gradient(#282828, #181818) no-repeat center fixed;;
       background-size: cover;
       max-width: 550px;
       margin: auto;
@@ -51,18 +52,22 @@
       min-height: 100vh;
   }
   
-  h1, h3, p{
-      color: rgb(250, 250, 250);
+  h1{
+    color:#FAFAFA;
+    font-family: 'Epilogue', sans-serif;
+  } 
+  h3, p{
+      color: #B3B3B3;
       font-family: 'Epilogue', sans-serif;
   }
   
   .chart{
-      background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
-      width: 550px;
+      background: #404040;
       border-width: 0px;
       border-style: solid;
       border-radius: 5px;
       margin: auto;
+      color: #FEFEFE;
   }
 
   .container {
@@ -82,22 +87,32 @@
 
 .loader > span {
   display: inline-block;
-  background-color: #a8ff75;
+  background-color: #0085C7;
   width: 16px;
   height: 16px;
   border-radius: 50%;
   margin: 0 8px;
-  animation: bounce 0.6s infinite alternate;
+  animation: bounce 1s infinite alternate;
 }
 
 .loader > span:nth-child(2) {
-  background-color: #ffe675;
+  background-color: #F4C300;
   animation-delay: 0.2s;
 }
 
 .loader > span:nth-child(3) {
   animation-delay: 0.4s;
-  background-color: #ffa175;
+  background-color: #000000;
+}
+
+.loader > span:nth-child(4) {
+  animation-delay: 0.6s;
+  background-color: #009F3D;
+}
+
+.loader > span:nth-child(5) {
+  animation-delay: 0.8s;
+  background-color: #DF0024;
 }
 
 @keyframes bounce {

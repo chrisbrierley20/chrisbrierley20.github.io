@@ -6,8 +6,10 @@
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
-    "color": "black"
+    "color": "#FEFEFE",
+    "subtitleColor": "#B3B3B3"
   },
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
   "data": {
     "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/Brazil_GDP.csv",
     "format": {"type": "csv"}
@@ -20,14 +22,27 @@
       "field": "Year",
       "type": "temporal",
       "title": null,
-      "axis": {"grid": false}
+      "axis": {
+        "title": null,
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
     },
     "y": {
       "field": "GDP per capita",
       "type": "quantitative",
       "title": null,
-      "axis": {"grid": false}
+      "axis": {
+        "title": null,
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
     }
-  },
-  "config": {}
+  }
 }
