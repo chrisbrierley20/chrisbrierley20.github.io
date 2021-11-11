@@ -19,7 +19,7 @@
   ],
   "title": {
     "text": "Total UK unemployment rate",
-    "subtitle": "% of population aged 16 and above (measured monthly). Source: ONS",
+    "subtitle": "% of population aged 16 and above (measured monthly). Source: ONS API",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "color": "#FFFFFF",
