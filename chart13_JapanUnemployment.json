@@ -1,0 +1,59 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/JapanUnemployment.json",
+    "format": {"type": "json", "property": "observations"}
+  },
+  "title": {
+    "text": "Japan Unemployment Rate - Age 15-64",
+    "subtitle": "Unemployment Rate (%), Monthly, Not Seasonally Adjusted. Source: FRED",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#FFFFFF",
+    "subtitleColor": "#B3B3B3"
+  },
+  "width": 300,
+  "height": 300,
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "mark": {"type": "line", "color": "#6CDAE7"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "title": "Unemployment Rate (%)",
+        "titleColor": "#FFFFFF",
+        "grid": false,
+        "labelSeparation": 10,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
+    },
+    "tooltip": [
+      {"field": "date", "type": "temporal", "title": "Date"},
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Unemployment Rate (%)"
+      }
+    ]
+  }
+}

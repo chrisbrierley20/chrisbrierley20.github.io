@@ -155,16 +155,62 @@
 </div>
 </div>
 
-<p>I have also used the ONS API to gather data on the UK's unemployment rate over time, as shown in this chart.</p>
+<p>I have also used the ONS API to gather data on the UK's unemployment rate over time, as shown in this chart</p>
 <div class="container">
 <!--Chart 9 -->
 <div class="chart" id="chart9">
   <script>
-    var myChart9 = "chart9_UKunemploymentAPI.json";
+    var myChart9 = "chart9_UkunemploymentAPI.json";
     vegaEmbed('#chart9', myChart9);
   </script>
 </div>
 </div>  
+
+<h3>Week 5 - Using Python loops to make multiple downloads from APIs</h3>
+<p>I built my first mini-dashboard this week, whereby I used loops on Python to download data from four datasets within the FRED API.</p>
+<p>The first of these four charts looks at Brazil's Consumer Price Index over time.</p>
+<div class="container">
+<!--Chart 10 -->
+<div class="chart" id="chart10">
+  <script>
+    var myChart10 = "chart10_BrazilCPI.json";
+    vegaEmbed('#chart10', myChart10);
+  </script>
+</div>
+</div> 
+
+<p>The second chart now shows the exchange rate between Brazilian Reals to One U.S. Dollar.</p>
+<div class="container">
+<!--Chart 11 -->
+<div class="chart" id="chart11">
+  <script>
+    var myChart11 = "chart11_BrazilEX.json";
+    vegaEmbed('#chart11', myChart11);
+  </script>
+</div>
+</div> 
+
+<p>This chart now looks at Japan's Consumer Price Index over time.</p>
+<div class="container">
+<!--Chart 12 -->
+<div class="chart" id="chart12">
+  <script>
+    var myChart12 = "chart12_JapanCPI.json";
+    vegaEmbed('#chart12', myChart12);
+  </script>
+</div>
+</div> 
+
+<p>The final chart shows Japan's unemployment rate.</p>
+<div class="container">
+<!--Chart 13 -->
+<div class="chart" id="chart13">
+  <script>
+    var myChart13 = "chart13_JapanUnemployment.json";
+    vegaEmbed('#chart13', myChart13);
+  </script>
+</div>
+</div> 
 
     </section>
     <script src="main.js"></script>
