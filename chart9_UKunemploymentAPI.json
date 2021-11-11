@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://api.allorigins.win/raw?url=https://api.ons.gov.uk/timeseries/MGUK/dataset/LMS/data",
+    "format": {"type": "json", "property": "months"}
+  },
+  "mark": {
+    "type": "line",
+    "color": "#FFFF66",
+    "strokeWidth": 4,
+    "interpolate": "linear"
+  },
+  "transform": [
+    {"calculate": "substring(datum.month,1)*12-1", "as": "month_n"},
+    {"calculate": "join([datum.year, datum.month_n],['-'])", "as": "date2"},
+    {"calculate": "timeParse(datum.date2, '%Y-%m')", "as": "date3"},
+    {"filter": "datum.year>minYear"},
+    {"filter": "datum.year<maxYear"}
+  ],
+  "title": {
+    "text": "Total UK unemployment rate",
+    "subtitle": "% of population aged 16 and above (measured monthly). Source: ONS",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "color": "#FFFFFF",
+    "subtitleColor": "#B3B3B3"
+  },
+  "params": [
+    {
+      "name": "minYear",
+      "value": 2006,
+      "bind": {
+        "input": "range",
+        "min": 2006,
+        "max": 2021,
+        "step": 1,
+        "name": "Start year:"
+      }
+    },
+    {
+      "name": "maxYear",
+      "value": 2021,
+      "bind": {
+        "input": "range",
+        "min": 2006,
+        "max": 2021,
+        "step": 1,
+        "name": "End year:"
+      }
+    }
+  ],
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "width": 300,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
+    },
+    "y": {
+      "field": "value",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "title": null,
+        "grid": false,
+        "labelSeparation": 10,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
+    },
+    "tooltip": [
+      {"field": "date", "type": "temporal", "title": "Date"},
+      {"field": "value", "type": "quantitative", "title": "Unemployment Rate"}
+    ]
+  }
+}

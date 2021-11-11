@@ -51,14 +51,16 @@
       flex-direction: column;
       min-height: 100vh;
   }
-  
+
   h1{
     color:#FAFAFA;
     font-family: 'Epilogue', sans-serif;
+    text-align: center;
   } 
   h3, p{
       color: #B3B3B3;
       font-family: 'Epilogue', sans-serif;
+      text-align: center;
   }
   
   .chart{
@@ -66,12 +68,18 @@
       border-width: 0px;
       border-style: solid;
       border-radius: 5px;
-      margin: auto;
+      margin: 0px auto;
       color: #FEFEFE;
+      transform-style: preserve-3d;
+      transform: perspective(1000px);
+      transition: 0.5s ease;  
   }
-
+  .chart:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
   .container {
-    background: linear-gradient(#75d8ff, #0077ff) no-repeat center fixed;
+    background: linear-gradient(#282828, #181818) no-repeat center fixed;
     display: flex;
     align-items: center;
     justify-content: center;
