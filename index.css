@@ -88,16 +88,19 @@ h1, h3, p{
 .card-text .date {
   color: rgb(255, 7, 110);
   font-size:13px;
+  font-family: 'Epilogue', sans-serif;
 }
 .card-text p {
   color: #B3B3B3;
   font-size:14px;
   font-weight: 300;
+  font-family: 'Epilogue', sans-serif;
 }
 .card-text h2 {
   margin-top:0px;
   font-size:28px;
   text-align: center;
+  font-family: 'Epilogue', sans-serif;
 }
 .card-stats {
   grid-area: stats; 

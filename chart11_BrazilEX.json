@@ -6,7 +6,7 @@
   },
   "title": {
     "text": "Brazilian Reals to U.S. Dollar Spot Exchange Rate",
-    "subtitle": "Brazilian Reals to One U.S. Dollar, Monthly, Not Seasonally Adjusted. Source: FRED",
+    "subtitle": "Monthly, Not Seasonally Adjusted. Source: FRED",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
