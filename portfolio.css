@@ -218,20 +218,37 @@ transition: opacity 1s ease-in;
   content: '\f057';
 }
 
-@media (max-width: 767px) {
+@media (max-width: 700px) {
   .navigation {
     left: -60px;
+    z-index: 1;
   }
   .navigation.active {
-    left: 0px;
-    width: 100%;
+    left: -60px;
+    width: 700px;
+    height: 100%;
+    z-index: 1;
   }
+
+  .navigation:hover {
+    width: 700px;
+  }
+
+  .toggle, .toggle.active, .toggle.active:before, .toggle:before {
+    z-index: 1;
+  }
+
   div.rest {
-    margin-left: 0px;
+    left: -275px;
+    padding: 1px 16px;
+    margin-left: 50px;
+    margin-right: 50px;
+    position: absolute;
   }
 }
 
 div.rest {
   margin-left: 300px;
+  margin-right: 50px;
   padding: 1px 16px;
 }
