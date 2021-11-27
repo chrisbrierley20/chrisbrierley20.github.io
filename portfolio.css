@@ -241,7 +241,7 @@ transition: opacity 1s ease-in;
   div.rest {
     left: -275px;
     padding: 1px 16px;
-    margin-left: 50px;
+    margin-left: 40px;
     margin-right: 50px;
     position: absolute;
   }
