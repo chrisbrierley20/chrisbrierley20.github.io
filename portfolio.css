@@ -32,10 +32,7 @@ h3, p{
   transition: 0.5s ease; 
   max-width: 350px; 
 }
-.chart:hover {
-transform: scale(1.05);
-box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
-}
+
 .container {
 background: linear-gradient(#282828, #181818) no-repeat center fixed;
 display: flex;

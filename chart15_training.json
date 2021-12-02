@@ -1,0 +1,56 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Total employees receiving job-related training",
+    "subtitle": "By quarter, not seasonally adjusted. Source: ONS",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#FEFEFE",
+    "subtitleColor": "#B3B3B3"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/Training_Data.csv"
+  },
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "mark": {
+    "type": "line",
+    "point": {"filled": false, "fill": "white", "color": "#FF00CC"},
+    "clip": true,
+    "color": "#FF00CC"
+  },
+  "width": 300,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "timeUnit": "yearquarter",
+      "field": "Date",
+      "scale": {"domain": [{"year": 2015}, {"year": 2022}]},
+      "title": null,
+      "axis": {
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "scale": {"domain": [2000000, 5000000]},
+      "title": null,
+      "axis": {
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
+    },
+    "tooltip": [
+      {"field": "Value", "type": "quantitative"},
+      {"timeUnit": "yearquarter", "field": "Date", "title": "Quarter"}
+    ]
+  }
+}
