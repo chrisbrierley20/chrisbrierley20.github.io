@@ -9,7 +9,12 @@
     "color": "#FFFFFF",
     "subtitleColor": "#B3B3B3"
   },
-  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "config": {
+    "background": "#404040",
+    "view": {
+      "stroke": "transparent"
+    }
+  },
   "width": 300,
   "height": 300,
   "data": {
@@ -23,15 +28,21 @@
     "color": "hotpink"
   },
   "transform": [
-    {"calculate": "year(datum.Date)", "as": "year"},
-    {"filter": "datum.year>=minYear"},
-    {"filter": "datum.year<=maxYear"}
+    {
+      "calculate": "year(datum.Date)",
+      "as": "year"
+    },
+    {
+      "filter": "datum.year>=minYear"
+    },
+    {
+      "filter": "datum.year<=maxYear"
+    }
   ],
   "params": [
     {
       "name": "minYear",
       "value": 2016,
-      
       "bind": {
         "input": "range",
         "min": 2016,

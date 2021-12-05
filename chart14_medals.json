@@ -1,7 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "data": {"url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/medal_table.csv"},
-    "title": {
+  "data": {
+    "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/medal_table.csv"
+  },
+  "title": {
     "text": "Total medal count at the Summer Olympics",
     "subtitle": "10 most successful from 1896-2020. Source: IOC Medal Database",
     "subtitleFontStyle": "italic",
@@ -11,9 +13,20 @@
     "subtitleColor": "#B3B3B3"
   },
   "height": 300,
-  "width": 300,
-  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
-  "repeat": {"layer": ["Bronze", "Silver", "Gold"]},
+  "width": 287,
+  "config": {
+    "background": "#404040",
+    "view": {
+      "stroke": "transparent"
+    }
+  },
+  "repeat": {
+    "layer": [
+      "Bronze",
+      "Silver",
+      "Gold"
+    ]
+  },
   "spec": {
     "mark": "bar",
     "encoding": {
@@ -22,43 +35,70 @@
         "type": "nominal",
         "title": null,
         "axis": {
-        "grid": false,
-        "domainColor": "#B3B3B3",
-        "labelColor": "#FFFFFF",
-        "tickColor": "#B3B3B3",
-        "gridColor": "black",
-        "titleColor": "#FFFFFF"
-      }
+          "grid": false,
+          "domainColor": "#B3B3B3",
+          "labelColor": "#FFFFFF",
+          "tickColor": "#B3B3B3",
+          "gridColor": "black",
+          "titleColor": "#FFFFFF"
+        }
       },
       "y": {
         "aggregate": "sum",
-        "field": {"repeat": "layer"},
+        "field": {
+          "repeat": "layer"
+        },
         "type": "quantitative",
         "title": "Medal Count",
         "axis": {
-        "grid": false,
-        "domainColor": "#B3B3B3",
-        "labelColor": "#FFFFFF",
-        "tickColor": "#B3B3B3",
-        "gridColor": "black",
-        "titleColor": "#FFFFFF"
-      }
+          "grid": false,
+          "domainColor": "#B3B3B3",
+          "labelColor": "#FFFFFF",
+          "tickColor": "#B3B3B3",
+          "gridColor": "black",
+          "titleColor": "#FFFFFF"
+        }
       },
       "color": {
-      "datum": {"repeat": "layer"},
-      "title": "",
-      "scale": {"range": ["#8C7853", "#E6E8FA", "#CFB53B"]},
-      "legend": {
-        "orient": "top-left",
-        "fillColor": "#404040",
-        "labelColor": "#FEFEFE"
-      }},
-      "xOffset": {"datum": {"repeat": "layer"}},
+        "datum": {
+          "repeat": "layer"
+        },
+        "title": "",
+        "scale": {
+          "range": [
+            "#8C7853",
+            "#E6E8FA",
+            "#CFB53B"
+          ]
+        },
+        "legend": {
+          "orient": "top-left",
+          "fillColor": "#404040",
+          "labelColor": "#FEFEFE"
+        }
+      },
+      "xOffset": {
+        "datum": {
+          "repeat": "layer"
+        }
+      },
       "tooltip": [
-      {"field": "Bronze", "type": "quantitative", "title": "Bronze"},
-      {"field": "Silver", "type": "quantitative", "title": "Silver"},
-      {"field": "Gold", "type": "quantitative", "title": "Gold"}
-    ]
+        {
+          "field": "Bronze",
+          "type": "quantitative",
+          "title": "Bronze"
+        },
+        {
+          "field": "Silver",
+          "type": "quantitative",
+          "title": "Silver"
+        },
+        {
+          "field": "Gold",
+          "type": "quantitative",
+          "title": "Gold"
+        }
+      ]
     }
   }
 }

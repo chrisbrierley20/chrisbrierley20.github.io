@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Coca-Cola share price",
-    "subtitle": "Price at close (US$), Ticker: KO. Alpha Vantage API" ,
+    "subtitle": "Price at close (US$), Ticker: KO. Alpha Vantage API",
     "subtitleFontStyle": "italic",
     "subtitleFontSize": 10,
     "anchor": "start",
@@ -11,12 +11,24 @@
   },
   "data": {
     "url": "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=KO&outputsize=full&apikey=SFHXQQ8GTSKECLV6&datatype=csv",
-    "format": {"type": "csv"}
+    "format": {
+      "type": "csv"
+    }
   },
-  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "config": {
+    "background": "#404040",
+    "view": {
+      "stroke": "transparent"
+    }
+  },
   "height": 300,
-  "width": 300,
-  "mark": {"type": "line", "point": false, "clip": true, "color": "#00FFFF"},
+  "width": 313,
+  "mark": {
+    "type": "line",
+    "point": false,
+    "clip": true,
+    "color": "#00FFFF"
+  },
   "encoding": {
     "x": {
       "field": "timestamp",
@@ -29,7 +41,13 @@
         "tickColor": "#B3B3B3",
         "gridColor": "black"
       },
-      "scale": {"domainMin": {"year": 2000, "month": "jan", "date": 1}}
+      "scale": {
+        "domainMin": {
+          "year": 2000,
+          "month": "jan",
+          "date": 1
+        }
+      }
     },
     "y": {
       "field": "close",
@@ -42,7 +60,12 @@
         "tickColor": "#B3B3B3",
         "gridColor": "black"
       },
-      "scale": {"domain": [0, 100]}
+      "scale": {
+        "domain": [
+          0,
+          100
+        ]
+      }
     }
   }
 }

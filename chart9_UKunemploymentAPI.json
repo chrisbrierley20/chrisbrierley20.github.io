@@ -2,7 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://api.allorigins.win/raw?url=https://api.ons.gov.uk/timeseries/MGUK/dataset/LMS/data",
-    "format": {"type": "json", "property": "months"}
+    "format": {
+      "type": "json",
+      "property": "months"
+    }
   },
   "mark": {
     "type": "line",
@@ -11,11 +14,24 @@
     "interpolate": "linear"
   },
   "transform": [
-    {"calculate": "substring(datum.month,1)*12-1", "as": "month_n"},
-    {"calculate": "join([datum.year, datum.month_n],['-'])", "as": "date2"},
-    {"calculate": "timeParse(datum.date2, '%Y-%m')", "as": "date3"},
-    {"filter": "datum.year>minYear"},
-    {"filter": "datum.year<maxYear"}
+    {
+      "calculate": "substring(datum.month,1)*12-1",
+      "as": "month_n"
+    },
+    {
+      "calculate": "join([datum.year, datum.month_n],['-'])",
+      "as": "date2"
+    },
+    {
+      "calculate": "timeParse(datum.date2, '%Y-%m')",
+      "as": "date3"
+    },
+    {
+      "filter": "datum.year>minYear"
+    },
+    {
+      "filter": "datum.year<maxYear"
+    }
   ],
   "title": {
     "text": "Total UK unemployment rate",
@@ -49,8 +65,13 @@
       }
     }
   ],
-  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
-  "width": 300,
+  "config": {
+    "background": "#404040",
+    "view": {
+      "stroke": "transparent"
+    }
+  },
+  "width": 320,
   "height": 300,
   "encoding": {
     "x": {
@@ -82,8 +103,16 @@
       }
     },
     "tooltip": [
-      {"field": "date", "type": "temporal", "title": "Date"},
-      {"field": "value", "type": "quantitative", "title": "Unemployment Rate"}
+      {
+        "field": "date",
+        "type": "temporal",
+        "title": "Date"
+      },
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Unemployment Rate"
+      }
     ]
   }
 }

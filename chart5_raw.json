@@ -9,22 +9,36 @@
     "color": "#FEFEFE",
     "subtitleColor": "#B3B3B3"
   },
-  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "config": {
+    "background": "#404040",
+    "view": {
+      "stroke": "transparent"
+    }
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/cum_second_jab.csv",
-    "format": {"type": "csv"}
+    "format": {
+      "type": "csv"
+    }
   },
-  "mark": {"type": "line", "point": false},
+  "mark": {
+    "type": "line",
+    "point": false
+  },
   "transform": [
     {
       "filter": {
         "field": "areaName",
-        "oneOf": ["Bristol, City of", "Mid Sussex", "Brighton and Hove"]
+        "oneOf": [
+          "Bristol, City of",
+          "Mid Sussex",
+          "Brighton and Hove"
+        ]
       }
     }
   ],
   "height": 300,
-  "width": 300,
+  "width": 290,
   "encoding": {
     "x": {
       "field": "date",
@@ -53,7 +67,9 @@
     "color": {
       "field": "areaName",
       "type": "nominal",
-      "scale": {"scheme": "set1"},
+      "scale": {
+        "scheme": "set1"
+      },
       "title": "",
       "legend": {
         "orient": "top-left",

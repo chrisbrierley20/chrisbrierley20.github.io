@@ -6,24 +6,24 @@
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 <head>
-  
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chris Brierley's Data Science Portfolio</title>
 
   <link rel="stylesheet" href="portfolio.css">
-  
+
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap'); 
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap');
   </style>
-  
+
   <script src="https://kit.fontawesome.com/6782582340.js" crossorigin="anonymous"></script>
-<!--The next three lines allow the Vega embed-->
-<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
-  
+  <!--The next three lines allow the Vega embed-->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
 
 </head>
 
@@ -33,254 +33,266 @@
 
 <!-- ///////////////////  START BODY //////////////////////////////////// -->
 
-<body>   
+<body>
 
-  
-    <div class="loader">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      
-      <section class="main"> 
-        <div class="navigation">
-          <ul>
-            <li>
-              <a href="index.html">
-                <span class="icon"><i class="fas fa-home"></i></span>
-                <span class="title">Home</span>
-              </a>
-            </li>
-        
-            <li>
-              <a href="portfolio.html">
-                <span class="icon"><i class="fas fa-code"></i></span>
-                <span class="title">Portfolio</span>
-              </a>
-            </li>
-        
-            <li>
-              <a href="project.html">
-                <span class="icon"><i class="fas fa-running"></i></span>
-                <span class="title">Project</span>
-              </a>
-            </li>
-        
-            <li>
-              <a href="https://rapidcharts.io/datascience">
-                <span class="icon"><i class="fas fa-graduation-cap"></i></span>
-                <span class="title">Data Science Course</span>
-              </a>
-            </li>
-        
-            <li>
-              <a href="https://github.com/chrisbrierley20/chrisbrierley20.github.io">
-                <span class="icon"><i class="fab fa-github"></i></span>
-                <span class="title">Github Repository</span>
-              </a>
-            </li>
-        
-          </ul> 
-          </div>
 
-          <div class="toggle" onclick="toggleMenu()"></div>
-          <script type="text/javascript">
-            function toggleMenu(){
-              let navigation = document.querySelector('.navigation');
-              let toggle = document.querySelector('.toggle')
-              navigation.classList.toggle('active');
-              toggle.classList.toggle('active');
-            }
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <section class="main">
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="index.html">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="title">Home</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="portfolio.html">
+            <span class="icon"><i class="fas fa-code"></i></span>
+            <span class="title">Portfolio</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="project.html">
+            <span class="icon"><i class="fas fa-running"></i></span>
+            <span class="title">Project</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://rapidcharts.io/datascience">
+            <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+            <span class="title">Data Science Course</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/chrisbrierley20/chrisbrierley20.github.io">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span class="title">Github Repository</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <script type="text/javascript">
+      function toggleMenu() {
+        let navigation = document.querySelector('.navigation');
+        let toggle = document.querySelector('.toggle')
+        navigation.classList.toggle('active');
+        toggle.classList.toggle('active');
+      }
+    </script>
+
+    <div class="rest">
+      <h1>DS Portfolio</h1>
+      <p>Chris Brierley</p>
+
+      <h3>Week 1 - Getting Started</h3>
+      <p>This is the first of 3 charts embedded into my website. The first two were given to us in class, while the
+        third chart was taken from the RapidCharts GitHub repository.</p>
+      <p>Chart 1 looks at how many Covid-19 cases were reported across different UK regions.</p>
+      <div class="container">
+
+        <!--Chart 1 -->
+        <div class="chart rgb" id="chart1">
+          <script>
+            var myChart1 = "chart1_covidUKRegions.json";
+            vegaEmbed('#chart1', myChart1);
           </script>
+        </div>
+      </div>
 
-          <div class="rest">
-      <h1>Data Science Portfolio</h1>
-  <p>Chris Brierley</p>
+      <p>Chart 2 shows how UK productivity has changed between 1971 and 2021.</p>
+      <div class="container">
+        <!--Chart 2 -->
+        <div class="chart rgb" id="chart2">
+          <script>
+            var myChart2 = "chart2_ukProductivity.json";
+            vegaEmbed('#chart2', myChart2);
+          </script>
+        </div>
+      </div>
 
-<h3>Week 1 - Getting Started</h3>
-<p>This is the first of 3 charts embedded into my website. The first two were given to us in class, while the third chart was taken from the RapidCharts GitHub repository.</p> 
-<p>Chart 1 looks at how many Covid-19 cases were reported across different UK regions.</p>
-<div class="container">
+      <p>The third chart shows how the price of ETH has changed since 2016. Use the start/end year sliders to change the
+        time period shown for the chart.</p>
+      <div class="container">
+        <!--Chart 3 -->
+        <div class="chart rgb" id="chart3">
+          <script>
+            var myChart3 = "chart3_ether.json";
+            vegaEmbed('#chart3', myChart3);
+          </script>
+        </div>
+      </div>
 
-<!--Chart 1 -->
-<div class="chart rgb" id="chart1">
-      <script>
-        var myChart1 = "chart1_covidUKRegions.json";
-        vegaEmbed('#chart1', myChart1);
-      </script>
-</div>
-</div>
+      <h3>Week 2 - Hosting Data</h3>
+      <p>I learned this week two key routes of accessing data: using an API and saving CSV files to my GitHub
+        repository.</p>
+      <p>This chart uses the UK Government's Coronavirus API to show how the number of new cases has changed in my home
+        county, my nearest city as well as my university city.</p>
+      <div class="container">
+        <!--Chart 4 -->
+        <div class="chart rgb" id="chart4">
+          <script>
+            var myChart4 = "chart4_API.json";
+            vegaEmbed('#chart4', myChart4);
+          </script>
+        </div>
+      </div>
 
-<p>Chart 2 shows how UK productivity has changed between 1971 and 2021.</p>
-<div class="container">
-<!--Chart 2 -->
-<div class="chart rgb" id="chart2">
-    <script>
-      var myChart2 = "chart2_ukProductivity.json";
-      vegaEmbed('#chart2', myChart2);
-    </script>
-</div>
-</div>
+      <p>Using the same regions as before, this chart now uses CSV data saved to my GitHub repository that shows how
+        each region has issued second doses of Covid-19 vaccinations.</p>
+      <div class="container">
+        <!--Chart 5 -->
+        <div class="chart rgb" id="chart5">
+          <script>
+            var myChart5 = "chart5_raw.json";
+            vegaEmbed('#chart5', myChart5);
+          </script>
+        </div>
+      </div>
 
-<p>The third chart shows how the price of ETH has changed since 2016. Use the start/end year sliders to change the time period shown for the chart.</p>
-<div class="container">
-<!--Chart 3 -->
-<div class="chart rgb" id="chart3">
-    <script>
-      var myChart3 = "chart3_ether.json";
-      vegaEmbed('#chart3', myChart3);
-    </script>
-</div>
-</div>  
+      <h3>Week 3 - Editing data and writing JSON by hand</h3>
+      <p>This week involved using "in-line" JSON data that I wrote, as well as manipulating CSV data stored locally in
+        my GitHub repository.</p>
+      <p>This chart displays my manually inputted data on UK labour productivity between 2000 and 2010.</p>
+      <div class="container">
+        <!--Chart 6 -->
+        <div class="chart rgb" id="chart6">
+          <script>
+            var myChart6 = "chart6_productivity.json";
+            vegaEmbed('#chart6', myChart6);
+          </script>
+        </div>
+      </div>
 
-<h3>Week 2 - Hosting Data</h3>
-<p>I learned this week two key routes of accessing data: using an API and saving CSV files to my GitHub repository.</p>
-<p>This chart uses the UK Government's Coronavirus API to show how the number of new cases has changed in my home county, my nearest city as well as my university city.</p>
-<div class="container">
-<!--Chart 4 -->
-<div class="chart rgb" id="chart4">
-  <script>
-    var myChart4 = "chart4_API.json";
-    vegaEmbed('#chart4', myChart4);
-  </script>
-</div>
-</div>
+      <p>In this next chart, I manipulated two World Bank data sets - one for population and one for GDP in constant
+        2010 US$, and combined them to find the GDP per capita for Brazil between 1960 and 2020.</p>
+      <div class="container">
+        <!--Chart 7 -->
+        <div class="chart rgb" id="chart7">
+          <script>
+            var myChart7 = "chart7_brazilGDP.json";
+            vegaEmbed('#chart7', myChart7);
+          </script>
+        </div>
+      </div>
 
-<p>Using the same regions as before, this chart now uses CSV data saved to my GitHub repository that shows how each region has issued second doses of Covid-19 vaccinations.</p>
-<div class="container">
-<!--Chart 5 -->
-<div class="chart rgb" id="chart5">
-  <script>
-    var myChart5 = "chart5_raw.json";
-    vegaEmbed('#chart5', myChart5);
-  </script>
-</div>
-</div>
+      <h3>Week 4 - API driven charts</h3>
+      <p>I have signed up and gained access to new, separate APIs that have not been used so far in my portfolio.</p>
+      <p>Using the Alpha Vantage API, I gathered data on the share price at close of Coca-Cola since 2000. </p>
+      <div class="container">
+        <!--Chart 8 -->
+        <div class="chart rgb" id="chart8">
+          <script>
+            var myChart8 = "chart8_CocaColaAPI.json";
+            vegaEmbed('#chart8', myChart8);
+          </script>
+        </div>
+      </div>
 
-<h3>Week 3 - Editing data and writing JSON by hand</h3>
-<p>This week involved using "in-line" JSON data that I wrote, as well as manipulating CSV data stored locally in my GitHub repository.</p>
-<p>This chart displays my manually inputted data on UK labour productivity between 2000 and 2010.</p>
-<div class="container">
-<!--Chart 6 -->
-<div class="chart rgb" id="chart6">
-  <script>
-    var myChart6 = "chart6_productivity.json";
-    vegaEmbed('#chart6', myChart6);
-  </script>
-</div> 
-</div>
+      <p>I have also used the ONS API to gather data on the UK's unemployment rate over time, as shown in this chart</p>
+      <div class="container">
+        <!--Chart 9 -->
+        <div class="chart rgb" id="chart9">
+          <script>
+            var myChart9 = "chart9_UKunemploymentAPI.json";
+            vegaEmbed('#chart9', myChart9);
+          </script>
+        </div>
+      </div>
 
-<p>In this next chart, I manipulated two World Bank data sets - one for population and one for GDP in constant 2010 US$, and combined them to find the GDP per capita for Brazil between 1960 and 2020.</p>
-<div class="container">
-<!--Chart 7 -->
-<div class="chart rgb" id="chart7">
-  <script>
-    var myChart7 = "chart7_brazilGDP.json";
-    vegaEmbed('#chart7', myChart7);
-  </script>
-</div> 
-</div>
+      <h3>Week 5 - Using Python loops to make multiple downloads from APIs</h3>
+      <p>I built my first mini-dashboard this week, whereby I used loops on Python to download data from four datasets
+        within the FRED API.</p>
+      <p>The first of these four charts looks at Brazil's Consumer Price Index over time.</p>
+      <div class="container">
+        <!--Chart 10 -->
+        <div class="chart rgb" id="chart10">
+          <script>
+            var myChart10 = "chart10_BrazilCPI.json";
+            vegaEmbed('#chart10', myChart10);
+          </script>
+        </div>
+      </div>
 
-<h3>Week 4 - API driven charts</h3>
-<p>I have signed up and gained access to new, separate APIs that have not been used so far in my portfolio.</p>
-<p>Using the Alpha Vantage API, I gathered data on the share price at close of Coca-Cola since 2000. </p>
-<div class="container">
-<!--Chart 8 -->
-<div class="chart rgb" id="chart8">
-  <script>
-    var myChart8 = "chart8_CocaColaAPI.json";
-    vegaEmbed('#chart8', myChart8);
-  </script>
-</div>
-</div>
+      <p>The second chart now shows the exchange rate between Brazilian Reals to One U.S. Dollar.</p>
+      <div class="container">
+        <!--Chart 11 -->
+        <div class="chart rgb" id="chart11">
+          <script>
+            var myChart11 = "chart11_BrazilEX.json";
+            vegaEmbed('#chart11', myChart11);
+          </script>
+        </div>
+      </div>
 
-<p>I have also used the ONS API to gather data on the UK's unemployment rate over time, as shown in this chart</p>
-<div class="container">
-<!--Chart 9 -->
-<div class="chart rgb" id="chart9">
-  <script>
-    var myChart9 = "chart9_UKunemploymentAPI.json";
-    vegaEmbed('#chart9', myChart9);
-  </script>
-</div>
-</div>  
+      <p>This chart now looks at Japan's Consumer Price Index over time.</p>
+      <div class="container">
+        <!--Chart 12 -->
+        <div class="chart rgb" id="chart12">
+          <script>
+            var myChart12 = "chart12_JapanCPI.json";
+            vegaEmbed('#chart12', myChart12);
+          </script>
+        </div>
+      </div>
 
-<h3>Week 5 - Using Python loops to make multiple downloads from APIs</h3>
-<p>I built my first mini-dashboard this week, whereby I used loops on Python to download data from four datasets within the FRED API.</p>
-<p>The first of these four charts looks at Brazil's Consumer Price Index over time.</p>
-<div class="container">
-<!--Chart 10 -->
-<div class="chart rgb" id="chart10">
-  <script>
-    var myChart10 = "chart10_BrazilCPI.json";
-    vegaEmbed('#chart10', myChart10);
-  </script>
-</div>
-</div> 
+      <p>The final chart shows Japan's unemployment rate.</p>
+      <div class="container">
+        <!--Chart 13 -->
+        <div class="chart rgb" id="chart13">
+          <script>
+            var myChart13 = "chart13_JapanUnemployment.json";
+            vegaEmbed('#chart13', myChart13);
+          </script>
+        </div>
+      </div>
 
-<p>The second chart now shows the exchange rate between Brazilian Reals to One U.S. Dollar.</p>
-<div class="container">
-<!--Chart 11 -->
-<div class="chart rgb" id="chart11">
-  <script>
-    var myChart11 = "chart11_BrazilEX.json";
-    vegaEmbed('#chart11', myChart11);
-  </script>
-</div>
-</div> 
+      <h3>Week 6&7 - Using Scrapers</h3>
+      <p>This week, I scraped an Olympic medal table from Wikipedia using Pandas in Python to find relevant data to then
+        chart, as I have done below</p>
+      <div class="container">
+        <!--Chart 14 -->
+        <div class="chart rgb" id="chart14">
+          <script>
+            var myChart14 = "chart14_medals.json";
+            vegaEmbed('#chart14', myChart14);
+          </script>
+        </div>
+      </div>
 
-<p>This chart now looks at Japan's Consumer Price Index over time.</p>
-<div class="container">
-<!--Chart 12 -->
-<div class="chart rgb" id="chart12">
-  <script>
-    var myChart12 = "chart12_JapanCPI.json";
-    vegaEmbed('#chart12', myChart12);
-  </script>
-</div>
-</div> 
+      <h3>Week 8 - Talking Economics Conference</h3>
+      <p>Anna Valero from LSE's Centre for Economic Performance stated that "We have seen a decrease in the volume of
+        on-the-job training and workers". After finding data on the number of workers who received job-related training
+        from the ONS, we can see that this was true from the start of the pandemic (Q2 2020), but numbers have now
+        returned to even beyond pre-pandemic levels.</p>
+      <div class="container">
+        <!--Chart 15 -->
+        <div class="chart rgb" id="chart15">
+          <script>
+            var myChart15 = "chart15_training.json";
+            vegaEmbed('#chart15', myChart15);
+          </script>
+        </div>
+      </div>
 
-<p>The final chart shows Japan's unemployment rate.</p>
-<div class="container">
-<!--Chart 13 -->
-<div class="chart rgb" id="chart13">
-  <script>
-    var myChart13 = "chart13_JapanUnemployment.json";
-    vegaEmbed('#chart13', myChart13);
-  </script>
-</div>
-</div> 
+    </div>
 
-<h3>Week 6&7 - Using Scrapers</h3>
-<p>This week, I scraped an Olympic medal table from Wikipedia using Pandas in Python to find relevant data to then chart, as I have done below</p>
-<div class="container">
-  <!--Chart 14 -->
-  <div class="chart rgb" id="chart14">
-    <script>
-      var myChart14 = "chart14_medals.json";
-      vegaEmbed('#chart14', myChart14);
-    </script>
-  </div>
-  </div> 
-
-<h3>Week 8 - Talking Economics Conference</h3>
-<p>Anna Valero from LSE's Centre for Economic Performance stated that "We have seen a decrease in the volume of on-the-job training and workers". After finding data on the number of workers who received job-related training from the ONS, we can see that this was true from the start of the pandemic (Q2 2020), but numbers have now returned to even beyond pre-pandemic levels.</p>
-<div class="container">
-  <!--Chart 15 -->
-  <div class="chart rgb" id="chart15">
-    <script>
-      var myChart15 = "chart15_training.json";
-      vegaEmbed('#chart15', myChart15);
-    </script>
-  </div>
-  </div> 
-
-</div>
-
-    </section>
-    <script src="main.js"></script>
+  </section>
+  <script src="main.js"></script>
 </body>
 
 <!-- /////////////////// END BODY //////////////////////////////////// -->

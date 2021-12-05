@@ -12,20 +12,38 @@
   "data": {
     "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/Training_Data.csv"
   },
-  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "config": {
+    "background": "#404040",
+    "view": {
+      "stroke": "transparent"
+    }
+  },
   "mark": {
     "type": "line",
-    "point": {"filled": false, "fill": "white", "color": "#FF00CC"},
+    "point": {
+      "filled": false,
+      "fill": "white",
+      "color": "#FF00CC"
+    },
     "clip": true,
     "color": "#FF00CC"
   },
-  "width": 300,
+  "width": 284,
   "height": 300,
   "encoding": {
     "x": {
       "timeUnit": "yearquarter",
       "field": "Date",
-      "scale": {"domain": [{"year": 2015}, {"year": 2022}]},
+      "scale": {
+        "domain": [
+          {
+            "year": 2015
+          },
+          {
+            "year": 2022
+          }
+        ]
+      },
       "title": null,
       "axis": {
         "grid": false,
@@ -38,7 +56,12 @@
     "y": {
       "field": "Value",
       "type": "quantitative",
-      "scale": {"domain": [2000000, 5000000]},
+      "scale": {
+        "domain": [
+          2000000,
+          5000000
+        ]
+      },
       "title": null,
       "axis": {
         "grid": false,
@@ -49,8 +72,15 @@
       }
     },
     "tooltip": [
-      {"field": "Value", "type": "quantitative"},
-      {"timeUnit": "yearquarter", "field": "Date", "title": "Quarter"}
+      {
+        "field": "Value",
+        "type": "quantitative"
+      },
+      {
+        "timeUnit": "yearquarter",
+        "field": "Date",
+        "title": "Quarter"
+      }
     ]
   }
 }

@@ -2,7 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/BrazilCPI.json",
-    "format": {"type": "json", "property": "observations"}
+    "format": {
+      "type": "json",
+      "property": "observations"
+    }
   },
   "title": {
     "text": "Brazil CPI - All items",
@@ -13,10 +16,18 @@
     "color": "#FFFFFF",
     "subtitleColor": "#B3B3B3"
   },
-  "width": 300,
+  "width": 310,
   "height": 300,
-  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
-  "mark": {"type": "line", "color": "#66FF66"},
+  "config": {
+    "background": "#404040",
+    "view": {
+      "stroke": "transparent"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "color": "#66FF66"
+  },
   "encoding": {
     "x": {
       "field": "date",
@@ -47,8 +58,16 @@
       }
     },
     "tooltip": [
-      {"field": "date", "type": "temporal", "title": "Date"},
-      {"field": "value", "type": "quantitative", "title": "Consumer Price Index"}
+      {
+        "field": "date",
+        "type": "temporal",
+        "title": "Date"
+      },
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Consumer Price Index"
+      }
     ]
   }
 }

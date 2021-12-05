@@ -9,14 +9,25 @@
     "color": "#FEFEFE",
     "subtitleColor": "#B3B3B3"
   },
-  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "config": {
+    "background": "#404040",
+    "view": {
+      "stroke": "transparent"
+    }
+  },
   "data": {
     "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/Brazil_GDP.csv",
-    "format": {"type": "csv"}
+    "format": {
+      "type": "csv"
+    }
   },
   "height": 300,
-  "width": 300,
-  "mark": {"type": "line", "point": false, "color": "#6600CC"},
+  "width": 297,
+  "mark": {
+    "type": "line",
+    "point": false,
+    "color": "#6600CC"
+  },
   "encoding": {
     "x": {
       "field": "Year",

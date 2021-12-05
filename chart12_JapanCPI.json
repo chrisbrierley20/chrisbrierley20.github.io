@@ -2,7 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/JapanCPI.json",
-    "format": {"type": "json", "property": "observations"}
+    "format": {
+      "type": "json",
+      "property": "observations"
+    }
   },
   "title": {
     "text": "Japan CPI - All items",
@@ -13,10 +16,18 @@
     "color": "#FFFFFF",
     "subtitleColor": "#B3B3B3"
   },
-  "width": 300,
+  "width": 307,
   "height": 300,
-  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
-  "mark": {"type": "line", "color": "#00CC99"},
+  "config": {
+    "background": "#404040",
+    "view": {
+      "stroke": "transparent"
+    }
+  },
+  "mark": {
+    "type": "line",
+    "color": "#00CC99"
+  },
   "encoding": {
     "x": {
       "field": "date",
@@ -48,7 +59,11 @@
       }
     },
     "tooltip": [
-      {"field": "date", "type": "temporal", "title": "Date"},
+      {
+        "field": "date",
+        "type": "temporal",
+        "title": "Date"
+      },
       {
         "field": "value",
         "type": "quantitative",
