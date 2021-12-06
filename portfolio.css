@@ -38,18 +38,12 @@ h3, p{
   font-family: 'Epilogue', sans-serif;
 }
 
-.span{
+.vega-bind label span{
   color: #FEFEFE;
   font-family: 'Epilogue', sans-serif;
 }
 
-.select{
-  background-color: #404040;
-  font-family: 'Epilogue', sans-serif;
-}
-
-select:not(:-internal-list-box) {
-  background-color: transparent;
+.vega-bind label select{
   font-family: 'Epilogue', sans-serif;
 }
 

@@ -1,0 +1,146 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Regression: Stock Prices of P&G on Coca-Cola",
+    "subtitle": "Price at close (US$) over past year, Source: Yahoo Finance",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#FEFEFE",
+    "subtitleColor": "#B3B3B3"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/sponsor_stocks.csv"
+  },
+  "height": 300,
+  "width": 300,
+  "config": {
+    "background": "#404040",
+    "view": {
+      "stroke": "transparent"
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "circle",
+        "point": false,
+        "clip": true,
+        "color": "#FFD300"
+      },
+      "encoding": {
+        "x": {
+          "field": "KO",
+          "type": "quantitative",
+          "title": "Coca-Cola (US$)",
+          "axis": {
+            "grid": false,
+            "domainColor": "#B3B3B3",
+            "labelColor": "#FFFFFF",
+            "tickColor": "#B3B3B3",
+            "gridColor": "black",
+            "titleColor": "#FFFFFF"
+          },
+          "scale": {
+            "domain": [
+              46,
+              58
+            ]
+          }
+        },
+        "y": {
+          "field": "PG",
+          "type": "quantitative",
+          "title": "P&G (US$)",
+          "axis": {
+            "grid": false,
+            "domainColor": "#B3B3B3",
+            "labelColor": "#FFFFFF",
+            "tickColor": "#B3B3B3",
+            "gridColor": "black",
+            "titleColor": "#FFFFFF"
+          },
+          "scale": {
+            "domain": [
+              100,
+              160
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "KO",
+            "type": "quantitative",
+            "title": "Coca-Cola stock price"
+          },
+          {
+            "field": "PG",
+            "type": "quantitative",
+            "title": "P&G stock price"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#DE38C8",
+        "strokeWidth": 5
+      },
+      "transform": [
+        {
+          "regression": "PG",
+          "on": "KO"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "KO",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              46,
+              58
+            ]
+          }
+        },
+        "y": {
+          "field": "PG",
+          "type": "quantitative",
+          "scale": {
+            "domain": [
+              100,
+              160
+            ]
+          }
+        }
+      }
+    },
+    {
+      "transform": [
+        {
+          "regression": "PG",
+          "on": "KO",
+          "params": true
+        },
+        {
+          "calculate": "'R²: '+format(datum.rSquared, '.2f')",
+          "as": "R2"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "color": "#FEFEFE",
+        "x": "width",
+        "align": "right",
+        "y": 0
+      },
+      "encoding": {
+        "text": {
+          "type": "nominal",
+          "field": "R2"
+        }
+      }
+    }
+  ]
+}
