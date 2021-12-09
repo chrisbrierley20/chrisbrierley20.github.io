@@ -1,5 +1,5 @@
-body{
-  background: linear-gradient(#282828, #181818) no-repeat center fixed;;
+body {
+  background: linear-gradient(#282828, #181818) no-repeat center fixed;
   background-size: cover;
   margin: 0;
   align-items: center;
@@ -8,19 +8,31 @@ body{
   min-height: 100vh;
 }
 
-h1{
-color:#FAFAFA;
-font-family: 'Epilogue', sans-serif;
-text-align: center;
-} 
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
 
-h3, p{
+body::-webkit-scrollbar-track {
+  background: #282828;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #BB86FC;
+}
+
+h1 {
+  color: #FAFAFA;
+  font-family: 'Epilogue', sans-serif;
+  text-align: center;
+}
+
+h3, p {
   color: #B3B3B3;
   font-family: 'Epilogue', sans-serif;
   text-align: center;
 }
 
-.chart{
+.chart {
   background: #404040;
   border-width: 0px;
   border-style: solid;
@@ -29,105 +41,124 @@ h3, p{
   color: #FEFEFE;
   transform-style: preserve-3d;
   transform: perspective(1000px);
-  transition: 0.5s ease; 
-  max-width: 350px; 
+  transition: 0.5s ease;
+  max-width: 350px;
 }
 
-.vega-bind-name{
+.vega-bind-name {
   color: #FEFEFE;
   font-family: 'Epilogue', sans-serif;
 }
 
-.vega-bind label span{
+.vega-bind label span {
   color: #FEFEFE;
   font-family: 'Epilogue', sans-serif;
 }
 
-.vega-bind label select{
+.vega-bind label select {
+  color: #FEFEFE;
   font-family: 'Epilogue', sans-serif;
+}
+
+.vega-bind select {
+  background-color: transparent;
+}
+
+.vega-bind select option {
+  background-color: #404040;
 }
 
 .container {
-background: linear-gradient(#282828, #181818) no-repeat center fixed;
-display: flex;
-} 
+  background: linear-gradient(#282828, #181818) no-repeat center fixed;
+  display: flex;
+}
+
 .rgb::after {
-content:"";
-background: linear-gradient(45deg,
-#ff0000 0%, 
-#ff9a00 10%,
-#d0de21 20%,
-#4fdc4a 30%, 
-#3fdad8 40%,
-#2fc9e2 50%, 
-#1c7fee 60%, 
-#5f15f2 70%, 
-#ba0cf8 80%, 
-#fb07d9 90%, 
-#ff0000 100%  )
-repeat 0% 0% / 300% 100%;
-position: absolute;
-inset: -3px;
-border-radius: 16px;
-filter: blur(8px);
-z-index: -1; 
-animation: rgb 6s linear infinite;
+  content: "";
+  background: linear-gradient(45deg,
+      #ff0000 0%,
+      #ff9a00 10%,
+      #d0de21 20%,
+      #4fdc4a 30%,
+      #3fdad8 40%,
+      #2fc9e2 50%,
+      #1c7fee 60%,
+      #5f15f2 70%,
+      #ba0cf8 80%,
+      #fb07d9 90%,
+      #ff0000 100%) repeat 0% 0% / 300% 100%;
+  position: absolute;
+  inset: -3px;
+  border-radius: 16px;
+  filter: blur(8px);
+  z-index: -1;
+  animation: rgb 6s linear infinite;
 }
+
 @keyframes rgb {
-0% {background-position: 0% 50%;}
-50% {background-position: 100% 50%;}
-100% {background-position: 0% 50%;}
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
 .loader {
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-top: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 250px;
 }
 
-.loader > span {
-display: inline-block;
-background-color: #0085C7;
-width: 16px;
-height: 16px;
-border-radius: 50%;
-margin: 0 8px;
-animation: bounce 1s infinite alternate;
+.loader>span {
+  display: inline-block;
+  background-color: #0085C7;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 0 8px;
+  animation: bounce 1s infinite alternate;
 }
 
-.loader > span:nth-child(2) {
-background-color: #F4C300;
-animation-delay: 0.2s;
+.loader>span:nth-child(2) {
+  background-color: #F4C300;
+  animation-delay: 0.2s;
 }
 
-.loader > span:nth-child(3) {
-animation-delay: 0.4s;
-background-color: #000000;
+.loader>span:nth-child(3) {
+  animation-delay: 0.4s;
+  background-color: #000000;
 }
 
-.loader > span:nth-child(4) {
-animation-delay: 0.6s;
-background-color: #009F3D;
+.loader>span:nth-child(4) {
+  animation-delay: 0.6s;
+  background-color: #009F3D;
 }
 
-.loader > span:nth-child(5) {
-animation-delay: 0.8s;
-background-color: #DF0024;
+.loader>span:nth-child(5) {
+  animation-delay: 0.8s;
+  background-color: #DF0024;
 }
 
 @keyframes bounce {
-to {
-width: 16px;
-height: 16px;
-transform: translate3d(0, -16px, 0);
-}
+  to {
+    width: 16px;
+    height: 16px;
+    transform: translate3d(0, -16px, 0);
+  }
 }
 
 .main {
-opacity: 0;
-display: none;
-transition: opacity 1s ease-in;
+  opacity: 0;
+  display: none;
+  transition: opacity 1s ease-in;
 }
 
 .navigation {
@@ -167,7 +198,7 @@ transition: opacity 1s ease-in;
   color: #ff0000
 }
 
-.navigation ul li a{
+.navigation ul li a {
   position: relative;
   width: 100%;
   display: flex;
@@ -175,8 +206,8 @@ transition: opacity 1s ease-in;
   color: #FAFAFA;
 }
 
-.navigation ul li a:hover{
-  color: #BB86FC;  
+.navigation ul li a:hover {
+  color: #BB86FC;
 }
 
 .navigation ul li a .icon {
@@ -213,7 +244,7 @@ transition: opacity 1s ease-in;
 }
 
 .toggle.active {
-  background: linear-gradient(#282828, #181818) no-repeat center fixed; 
+  background: linear-gradient(#282828, #181818) no-repeat center fixed;
   transition: 0.5s ease;
 }
 
@@ -238,6 +269,7 @@ transition: opacity 1s ease-in;
     left: -60px;
     z-index: 1;
   }
+
   .navigation.active {
     left: -60px;
     width: 700px;
