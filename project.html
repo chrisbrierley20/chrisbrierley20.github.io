@@ -1,47 +1,127 @@
 <!DOCTYPE html>
 
-<!-- Richard Davies, Data Science 2021 -->
+<!-- Chris Brierley, Data Science 2021 -->
 
 
 <!-- ///////////////////  HEAD //////////////////////////////////// -->
 
 <head>
-  
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chris Brierley's Data Science Portfolio</title>
+  <!--These next few lines allow for the icons in my navigation bar to show up-->
+  <link rel="stylesheet" href="project.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
-<!--The next three lines allow the Vega embed-->
-<script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-<script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
-
-<link rel="stylesheet" href="index.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap'); 
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap');
   </style>
+
+  <script src="https://kit.fontawesome.com/6782582340.js" crossorigin="anonymous"></script>
+  <!--The next three lines allow the Vega embed-->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.21.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+
 
 </head>
 
+<!-- ///////////////////  HEAD //////////////////////////////////// -->
+
+
+
+<!-- ///////////////////  START BODY //////////////////////////////////// -->
+
 <body>
 
-  <h1>Data Science Project</h1>
-  <p>Chris Brierley</p>
-  
-  <div class="dropdown">
-    <button class="dropbtn">Menu</button>
-    <div class="dropdown-content">
-      <a href="index.html">Home</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="project.html">Project</a>
-      <a href="https://rapidcharts.io/datascience">Data Science Course</a>
-      <a href="https://github.com/chrisbrierley20/chrisbrierley20.github.io/">GitHub Repository</a>
-    </div>
+
+  <div class="loader">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
-  
+
+  <section class="main">
+    <div class="navigation">
+      <ul>
+        <li>
+          <a href="index.html">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="title">Home</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="portfolio.html">
+            <span class="icon"><i class="fas fa-code"></i></span>
+            <span class="title">Portfolio</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="project.html">
+            <span class="icon"><i class="fas fa-running"></i></span>
+            <span class="title">Project</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://rapidcharts.io/datascience">
+            <span class="icon"><i class="fas fa-graduation-cap"></i></span>
+            <span class="title">Data Science Course</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://github.com/chrisbrierley20/chrisbrierley20.github.io">
+            <span class="icon"><i class="fab fa-github"></i></span>
+            <span class="title">Github Repository</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="toggle" onclick="toggleMenu()"></div>
+    <script type="text/javascript">
+      function toggleMenu() {
+        let navigation = document.querySelector('.navigation');
+        let toggle = document.querySelector('.toggle')
+        navigation.classList.toggle('active');
+        toggle.classList.toggle('active');
+      }
+    </script>
+
+    <div class="rest">
+      <h1>DS Project</h1>
+      <p>Chris Brierley</p>
+
+      <h2>Olympinomics - The Economic Impacts of the Olympic Games</h2>
+      <h3>Does being a part of the Olympic Partner Programme affect a firm's stock price?</h3>>
+      <div class="container">
+
+        <!--Chart 1 -->
+        <div class="chart rgb" id="chart1">
+          <script>
+            var myChart1 = "chart17_stocks.json";
+            vegaEmbed('#chart1', myChart1);
+          </script>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+  <script src="main.js"></script>
 </body>
+
+<!-- /////////////////// END BODY //////////////////////////////////// -->
+
+</html>

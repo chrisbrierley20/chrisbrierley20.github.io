@@ -295,7 +295,7 @@
 
       <h3>Week 9 - Advanced Analytics</h3>
       <p>This week, I used python to combine multiple datasets for the stock prices of firms on the "Olympic Partner
-        Programme" for the last year. I then ran a linear regression in vega-lite to see whether the stock price of
+        Programme" for the last year. I then ran a linear regression in Vega-Lite to see whether the stock price of
         Coca-Cola affects that for P&G. This yielded an R-squared coefficient of 0.63, implying that 63% of variation in
         the stock price of P&G is explained by the stock price of Coca-Cola.</p>
       <div class="container">
@@ -304,6 +304,20 @@
           <script>
             var myChart16 = "chart16_regression.json";
             vegaEmbed('#chart16', myChart16);
+          </script>
+        </div>
+      </div>
+
+      <h3>Week 10 - Interactive Charts</h3>
+      <p>This week, I made two fully interactive charts using the Vega-Lite gallery. The first one highlights the series
+        you hover over or select, while greying out all other series in the chart. Hovering over a line also reveals
+        what stock you are looking at via the tooltip.</p>
+      <div class="container">
+        <!--Chart 17 -->
+        <div class="chart rgb" id="chart17">
+          <script>
+            var myChart17 = "chart17_stocks.json";
+            vegaEmbed('#chart17', myChart17);
           </script>
         </div>
       </div>
