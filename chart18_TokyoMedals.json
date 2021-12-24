@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "title": {
+    "text": "GDP per capita and Olympic medals",
+    "subtitle": [
+      "2020 GDP per capita, (constant 2015 US$). Source: World Bank.",
+      "Tokyo 2020 Medals. Source: Olympics.com, scraped via Wikipedia.",
+      "Tokyo 2020 Athletes. Source: Olympics.com, scraped via Wikipedia."
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#FEFEFE",
+    "subtitleColor": "#B3B3B3"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/Tokyo2020Data.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {"filter": "datum.Gold>=minGold"},
+    {"filter": "datum.Gold<=maxGold"},
+    {"filter": "datum.Total<=maxTotal"}
+  ],
+  "height": 300,
+  "width": 297,
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "params": [
+    {
+      "name": "minGold",
+      "value": 0,
+      "bind": {"input": "range", "min": 0, "max": 40, "step": 1}
+    },
+    {
+      "name": "maxGold",
+      "value": 40,
+      "bind": {"input": "range", "min": 0, "max": 40, "step": 1}
+    },
+    {
+      "name": "maxTotal",
+      "value": 120,
+      "bind": {"input": "range", "min": 0, "max": 120, "step": 1}
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "circle", "point": false, "interpolate": "monotone"},
+      "encoding": {
+        "color": {
+          "field": "Gold",
+          "legend": {
+            "direction": "vertical",
+            "orient": "top-right",
+            "title": "Gold Medals",
+            "labelColor": "#FEFEFE",
+            "titleColor": "#FEFEFE"
+          },
+          "type": "quantitative",
+          "scale": {"domain": [40, 0], "scheme": "goldred"}
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "GDP per capita",
+      "type": "quantitative",
+      "axis": {
+        "title": "GDP per Capita ($)",
+        "titleColor": "#FFFFFF",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "grid": false
+      }
+    },
+    "y": {
+      "field": "Total",
+      "type": "quantitative",
+      "title": "Total Medals Won",
+      "axis": {
+        "titleColor": "#FFFFFF",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "grid": false
+      },
+      "scale": {"domain": [0, 120]}
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal", "title": "Team"},
+      {
+        "field": "Athletes",
+        "type": "quantitative",
+        "title": "Number of Athletes"
+      },
+      {
+        "field": "GDP per capita",
+        "type": "quantitative",
+        "title": "GDP per capita ($)"
+      },
+      {"field": "Gold", "type": "quantitative", "title": "Gold Medals"},
+      {"field": "Total", "type": "quantitative", "title": "Total Medals"}
+    ],
+    "size": {"field": "Athletes", "type": "quantitative", "legend": null}
+  }
+}
