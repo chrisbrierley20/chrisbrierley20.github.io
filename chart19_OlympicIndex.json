@@ -1,0 +1,81 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Exchange Rate Index - 21st Century Olympic Hosts",
+    "subtitle": [
+      "Index of USD against 1 unit of Host currency, Source: FRED",
+      "Olympic Index uses the following currencies: 2000-2004: Euro, ",
+      "2004-2008: Yuan, 2008-2012: Pound, 2012-2016: Real, 2016-2021: Yen.",
+      "October 2000 = 100"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#FEFEFE",
+    "subtitleColor": "#B3B3B3"
+  },
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "data": {
+    "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/Index_Final.csv"
+  },
+  "width": 275,
+  "height": 350,
+  "encoding": {
+    "x": {
+      "field": "Date",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "scale": {"domain": [20, 190]},
+      "title": "Index",
+      "axis": {
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black",
+        "titleColor": "#FFFFFF"
+      }
+    },
+    "color": {
+      "field": "Index",
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "title": "Index",
+        "labelColor": "#FEFEFE",
+        "titleColor": "#FEFEFE"
+      }
+    },
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2},
+    "tooltip": [
+      {"field": "Index", "title": "Index"},
+      {"field": "Value", "title": "Value", "type": "quantitative"},
+      {"field": "Date", "type": "temporal"}
+    ]
+  },
+  "layer": [
+    {
+      "description": "transparent layer to make it easier to trigger selection",
+      "params": [
+        {
+          "name": "hover",
+          "value": [{"Index": "Olympic"}],
+          "select": {"type": "point", "fields": ["Index"], "on": "mouseover"}
+        }
+      ],
+      "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+    },
+    {"mark": "line"}
+  ]
+}
