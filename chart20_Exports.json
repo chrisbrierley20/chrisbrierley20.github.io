@@ -1,0 +1,106 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Export Index - Previous Three Olympic Hosts",
+    "subtitle": [
+      "Index of Exports (BoP, Current US$), Source: World Bank",
+      "Base Year = Year of bid. Index=100",
+      "End Year = Two years after Olympics held",
+      "Winning Countries: UK (red), Brazil (orange), Japan (yellow)",
+      "Losing Countries: France (green), Spain (blue), Turkey (purple)"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#FEFEFE",
+    "subtitleColor": "#B3B3B3"
+  },
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "width": 295,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "title": "Year",
+      "axis": {
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black",
+        "titleColor": "#FFFFFF"
+      }
+    },
+    "y": {
+      "field": "Index",
+      "type": "quantitative",
+      "scale": {"domain": [80, 170]},
+      "title": "Index",
+      "axis": {
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black",
+        "titleColor": "#FFFFFF"
+      }
+    },
+    "opacity": {"condition": {"param": "hover", "value": 1}, "value": 0.2},
+    "tooltip": [
+      {"field": "Index", "title": "Export Index"},
+      {"field": "Country", "title": "Country", "type": "nominal"},
+      {"field": "Year", "title": "Years since bid", "type": "quantitative"}
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/UK_Export.csv"
+      },
+      "mark": {"type": "line", "color": "#ED0A3F"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/Brazil_Export.csv"
+      },
+      "mark": {"type": "line", "color": "#FF8833"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/Japan_Export.csv"
+      },
+      "mark": {"type": "line", "color": "#F8D568"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/France_Export.csv"
+      },
+      "mark": {"type": "line", "color": "#3AA655"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/Spain_Export.csv"
+      },
+      "mark": {"type": "line", "color": "#02A4D3"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/Turkey_Export.csv"
+      },
+      "mark": {"type": "line", "color": "#766EC8"}
+    },
+    {
+      "description": "transparent layer to make it easier to trigger selection",
+      "params": [
+        {
+          "name": "hover",
+          "value": [{"Country": "Japan"}],
+          "select": {"type": "point", "fields": ["Country"], "on": "mouseover"}
+        }
+      ],
+      "mark": {"type": "line", "strokeWidth": 8, "stroke": "transparent"}
+    },
+    {"mark": "line"}
+  ]
+}
