@@ -1,0 +1,80 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/chrisbrierley20/chrisbrierley20.github.io/main/Tourism.csv"
+  },
+  "title": {
+    "text": "International Tourist Arrivals to Olympic Hosts",
+    "subtitle": [
+      "Index of International Tourist Arrivals, Source: UNWTO",
+      "Olympic Year Index = 100",
+      "Korea and Russia uses data from February for the three years",
+      "United Kingdom and Brazil uses data from July and August"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#FEFEFE",
+    "subtitleColor": "#B3B3B3"
+  },
+  "height": 300,
+  "width": 298,
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "repeat": {"layer": ["Year Before", "Olympic Year", "Year After"]},
+  "spec": {
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Country",
+        "type": "nominal",
+        "title": null,
+        "axis": {
+          "grid": false,
+          "domainColor": "#B3B3B3",
+          "labelColor": "#FFFFFF",
+          "tickColor": "#B3B3B3",
+          "gridColor": "black",
+          "titleColor": "#FFFFFF"
+        }
+      },
+      "y": {
+        "aggregate": "sum",
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": "Tourism Index",
+        "axis": {
+          "grid": false,
+          "domainColor": "#B3B3B3",
+          "labelColor": "#FFFFFF",
+          "tickColor": "#B3B3B3",
+          "gridColor": "black",
+          "titleColor": "#FFFFFF"
+        }
+      },
+      "color": {
+        "datum": {"repeat": "layer"},
+        "title": "",
+        "scale": {"range": ["#D92121", "#CFB53B", "#3AA655"]},
+        "legend": {
+          "orient": "bottom",
+          "fillColor": "#404040",
+          "labelColor": "#FEFEFE"
+        }
+      },
+      "xOffset": {"datum": {"repeat": "layer"}},
+      "tooltip": [
+        {
+          "field": "Year Before",
+          "type": "quantitative",
+          "title": "Year Before"
+        },
+        {
+          "field": "Olympic Year",
+          "type": "quantitative",
+          "title": "Olympic Year"
+        },
+        {"field": "Year After", "type": "quantitative", "title": "Year After"}
+      ]
+    }
+  }
+}
