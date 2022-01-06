@@ -7,7 +7,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
-
+/* Set scrollbar to be thinner and change colour */ 
 body::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -19,7 +19,7 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: #BB86FC;
 }
-
+ /* Set text colours and font */ 
 h1 {
   color: #FAFAFA;
   font-family: 'Epilogue', sans-serif;
@@ -31,7 +31,7 @@ h3, p {
   font-family: 'Epilogue', sans-serif;
   text-align: center;
 }
-
+ /* Allows a space for my charts to go onto */ 
 .chart {
   background: #404040;
   border-width: 0px;
@@ -44,7 +44,7 @@ h3, p {
   transition: 0.5s ease;
   max-width: 350px;
 }
-
+ /* Styles my selectors and sliders in my charts*/ 
 .vega-bind-name {
   color: #FEFEFE;
   font-family: 'Epilogue', sans-serif;
@@ -67,12 +67,12 @@ h3, p {
 .vega-bind select option {
   background-color: #404040;
 }
-
+  /* Prevents charts from lining up horizontally*/
 .container {
   background: linear-gradient(#282828, #181818) no-repeat center fixed;
   display: flex;
 }
-
+  /* RGB animation effect that goes behind my charts and cards*/
 .rgb::after {
   content: "";
   background: linear-gradient(45deg,
@@ -108,7 +108,7 @@ h3, p {
     background-position: 0% 50%;
   }
 }
-
+ /* Styles how my loading balls should look */
 .loader {
   display: flex;
   justify-content: center;
@@ -146,7 +146,7 @@ h3, p {
   animation-delay: 0.52s;
   background-color: #DF0024;
 }
-
+ /* Makes each ball bounce */ 
 @keyframes bounce {
   to {
     width: 16px;
@@ -154,13 +154,13 @@ h3, p {
     transform: translate3d(0, -16px, 0);
   }
 }
-
+  /* Fades my content in once loading screen has finished */
 .main {
   opacity: 0;
   display: none;
   transition: opacity 1s ease-in;
 }
-
+  /* All styling for my side navigation bar */
 .navigation {
   position: fixed;
   margin: 0;
@@ -263,7 +263,7 @@ h3, p {
 .toggle.active:before {
   content: '\f057';
 }
-
+  /* Media queries that allow both a stable mobile and desktop version of my website*/
 @media (max-width: 700px) {
   .navigation {
     left: -60px;

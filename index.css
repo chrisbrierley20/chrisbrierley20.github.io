@@ -10,11 +10,11 @@ body {
   overflow: auto;
   overflow-x: hidden;
 }
-
+ /* Set text colours and font */ 
 h1, h3, p {
   font-family: 'Epilogue', sans-serif;
 }
-
+ /* Sets boundaries for my cards to fit */ 
 .container {
   width: auto;
   margin: auto;
@@ -26,7 +26,7 @@ h1, h3, p {
   justify-content: space-around;
   flex-flow: wrap;
 }
-
+ /* Set zooming and size properties for my card itself */ 
 .card {
   display: grid;
   grid-template-columns: 300px;
@@ -43,7 +43,7 @@ h1, h3, p {
   transform: perspective(1000px);
   transition: 0.5s ease;
 }
-
+ /* RGB animation that goes behind the card */ 
 .rgb::after {
   content: "";
   background: linear-gradient(45deg,
@@ -80,7 +80,7 @@ h1, h3, p {
     background-position: 0% 50%;
   }
 }
-
+ /* All content relevant for each card */ 
 .card-image {
   grid-area: image;
   background: linear-gradient(#fff0 0%, #fff0 70%, #1d1d1d 100%), url("data_science.jpg");

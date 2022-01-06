@@ -12,3 +12,4 @@ function init() {
 }
 
 init();
+// Allows for the loading screen to fade out correctly once content has finished loading

@@ -11,7 +11,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chris Brierley's Data Science Portfolio</title>
-  <!--These next few lines allow for the icons in my navigation bar to show up-->
+  <!--These next few lines allow for the icons in my navigation bar to show up and links to all stylesheets-->
   <link rel="stylesheet" href="project.css">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -19,6 +19,26 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <style>
+    a:link {
+      text-decoration: underline;
+      color: #B3B3B3;
+    }
+
+    a:visited {
+      text-decoration: underline;
+      color: #B3B3B3;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #B3B3B3;
+    }
+
+    a:active {
+      text-decoration: none;
+      color: #B3B3B3;
+    }
+
     @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap');
   </style>
 
@@ -47,7 +67,7 @@
     <span></span>
     <span></span>
   </div>
-
+  <!--Navigation sidebar icons-->
   <section class="main">
     <div class="navigation">
       <ul>
@@ -88,7 +108,7 @@
 
       </ul>
     </div>
-
+    <!--Simple Javascript that allows the hover function of my navbar to work-->
     <div class="toggle" onclick="toggleMenu()"></div>
     <script type="text/javascript">
       function toggleMenu() {
@@ -98,7 +118,7 @@
         toggle.classList.toggle('active');
       }
     </script>
-
+    <!--Everything else! All my charts and added text-->
     <div class="rest">
       <h1>DS Project</h1>
       <p>Chris Brierley</p>
@@ -106,9 +126,9 @@
       <h2>Olympinomics - The Economic Impacts of the Olympic Games</h2>
 
       <h3>Introduction</h3>
-      <p>This project aims to investigate various macro and microeconomic impacts the Olympic games can have on host
-        nations, competitors and firms alike. Ultimately, this results in hopefully deciding whether hosting or
-        sponsoring the Olympics is an economically viable strategy on improving various economic indicators. </p>
+      <p>This project aims to investigate the macro and microeconomic impacts of the Olympic games on host nations and
+        firms, ultimately deciding whether hosting or sponsoring the Olympics is an economically viable strategy on
+        improving various economic indicators. </p>
 
       <h3>Does being a part of the Olympic Partner Programme affect a firm's stock price?</h3>
 
@@ -133,6 +153,14 @@
       </div>
 
       <h3>The data I used and how I accessed it</h3>
+      <p>I opted against using many APIs in my project as most of my project investigates past Olympic games, rather
+        than future trends, and thus most future data is not relevant. Furthermore, in cases such as Japan, using the
+        E-stat API would fetch results in Japanese which Vega-lite would not understand.</p>
+      <p>For data on GDP per capita and exports I used World Bank data to download relevant CSV files. I used FRED for
+        all exchange rate data - again not using their API as Vega-lite would not load the data. To access Olympic medal
+        tables and the number of athletes brought to each Olympics, I scraped Wikipedia tables using data from
+        Olympics.com. I also used UNWTO seasonal data for my tourism chart. Finally, for stock prices and exchange
+        rates, I used the Yahoo finance package in Python and the Alphavantage API respectively.</p>
 
       <h3>Do richer countries win more medals at the Olympics?</h3>
 
@@ -145,6 +173,19 @@
           </script>
         </div>
       </div>
+
+
+      <h3>Conclusions (Part 1)</h3>
+      <p>For firms in the Olympic Partner Programme, I found that there is no real effect of the Olympics on the stock
+        price of these firms. Each firm's stock price behaves very differently during the Olympic months, which implies
+        that these fluctuations are explained by external factors. The firms whose stock price behaved most similarly
+        during 2021 were Coca-Cola and P&G (the two biggest sponsors of the Olympics), as shown in the second graph
+        whereby 63% of variation in P&G can be explained by variation in Coca-Cola. However, this is not statistically
+        significant enough to conclude the Olympics have caused these two stock prices to act similarly.</p>
+      <p>Interestingly, GDP per capita does not significantly affect the number of medals won in the previous 3 Olympic
+        games. Almost all countries at any income level won fewer than 20, while the U.S., Great Britain, China and
+        Russia won considerably more medals. This appears to be due to the number of athletes each country brought
+        rather than GDP per capita.</p>
 
       <h3>Exchange Rates - Does a host's currency appreciate in the lead-up of the Olympics?</h3>
 
@@ -159,7 +200,7 @@
       </div>
 
 
-      <h3>Conclusions (Part 1)</h3>
+
 
       <h3>Exports - Do Rose and Spiegel's (2011) findings on Olympic hosts and exports still hold today?</h3>
 
@@ -186,6 +227,24 @@
       </div>
 
       <h3>Conclusions (Part 2)</h3>
+      <p>My Olympic index shows that a host's currency could be used as a winning foreign exchange strategy. For over
+        half of host countries since 2000, their currency appreciated against the dollar in the 4-year build-up to their
+        games. However, Brazil's Real crashes the Olympic index by 70 points, which shows that the build-up to the
+        Olympics doesn't always appreciate the currency. </p>
+      <p>I also investigated how a host's exports compared to the country eliminated in the final voting round for the
+        bid and found that winning countries have a larger export index across the period from winning the bid itself to
+        two years after the games are held. This is excluding the UK, whose exports in the wake of the 2007-08 financial
+        crisis fared much worse than for France, again highlighting the significance of external economic events
+        compared to the Olympic games themselves. </p>
+      <p>Finally, it's too early to tell whether the handover of the Olympics from Tokyo to Paris resulted in an
+        appreciation of the Euro against the Yen. While I expect over the next few years for the Euro to appreciate, a
+        crash like the Brazilian Real could still occur for the Euro. As this chart uses an API, we will see how this
+        relationship changes over coming months. </p>
+      <p>Overall, the economic viability of the Olympics is inconclusive. I believe that there is selection bias that
+        the IOC uses to pick future hosts of the Olympics, whereby only countries that display encouraging economic
+        forecasts are considered, again nullifying the significance of the Olympics itself. While the Olympics itself is
+        a small economic event, using it as a signal for future prosperity appears a lot more appropriate than simply
+        assuming its direct impacts on economies and firms alike.</p>
 
       <h3>Looking ahead - Will the Euro appreciate against the Yen following the announcement of the Paris 2024 games?
       </h3>
@@ -201,26 +260,53 @@
       </div>
 
       <h3>Challenges in data cleaning/analysis and how I overcame them</h3>
-      <p>By far the greatest challenge I faced when cleaning data was with the Exchange Rate Index chart. This required
-        taking daily exchange rate data of USD to 1 unit of local currency from FRED for the 5 previous currencies of
-        Olympic hosts between 2000 and 2021 and converting to an index. I then created a separate Olympic index inspired
-        by Goldman Sachs (2012) (https://www.goldmansachs.com/insights/archive/archive-pdfs/olympics-and-economics-.pdf)
-        which follows the currency of an Olympic host from 4 years prior to the day of the closing ceremony before
+      <p>The Exchange Rate Index chart posed the greatest challenge as it required taking daily exchange rate data of
+        USD to 1 unit of local currency from FRED for the 5 previous currencies of Olympic hosts between 2000 and 2021
+        and converting them to an index. I then created a separate Olympic index inspired by <a
+          href="https://www.goldmansachs.com/insights/archive/archive-pdfs/olympics-and-economics-.pdf">Goldman
+          Sachs (2012)</a>
+        which follows the currency of an Olympic host from 4 years prior until the day of the closing ceremony before
         changing to the next currency. Furthermore, using daily data would make the chart almost illegible, so I had to
-        use Excel filters to only include the closest date to the first of the month, thereby now only using monthly
-        data.</p>
-      <p>There were also problems with scraping Wikipedia in Python for Olympic medal tables and number of athletes. This
-        is because for each year, the columns in each table would differ considerably. Time was therefore spent manually
-        inputting into Python which rows should be deleted from each unique table. Combining these finalised tables into
-        one final spreadsheet was also particularly difficult when purely using Python, so I instead opted to use Excel
-        to make my final, cleaned spreadsheet.</p>
-      
+        use Excel filters to only include the closest date to the first of the month. </p>
+      <p>When scraping Wikipedia in Python for Olympic medal tables and number of athletes, the rows in each table would
+        differ considerably so time was therefore spent telling Python which rows should be deleted from each unique
+        table. Instead of using a data join in Python, I instead opted to use Excel to make my final, cleaned
+        spreadsheet.</p>
 
-      <h3>List of data sources:</h3>
 
+      <h3>List of sources:</h3>
+      <p><a
+          href="https://www.alphavantage.co/query?function=FX_WEEKLY&from_symbol=EUR&to_symbol=JPY&outputsize=full&apikey=SFHXQQ8GTSKECLV6&datatype=csv">Alphavantage</a>
+      </p>
+      <p>FRED <a href="https://fred.stlouisfed.org/series/DEXJPUS">(1)</a> <a
+          href="https://fred.stlouisfed.org/series/DEXBZUS">(2)</a> <a
+          href="https://fred.stlouisfed.org/series/DEXUSUK">(3)</a> <a
+          href="https://fred.stlouisfed.org/series/DEXCHUS">(4)</a> <a
+          href="https://fred.stlouisfed.org/series/DEXUSEU">(5)</a></p>
+      <p><a href="https://www.youtube.com/watch?v=DvpSKoCyN5Q">Online Tutorials - Side navigation bar tutorial</a></p>
+      <p><a href="https://www.youtube.com/watch?v=lmh5_QHBkNQ">Red Stapler - RGB card design inspiration</a></p>
+      <p><a href="https://www.youtube.com/watch?v=BwhTKJFpKSw">Traversy Media - CSS loading animation inspiration</a>
+      </p>
+      <p><a href="https://www.unwto.org/seasonality">UNWTO</a></p>
+      <p>Wikipedia (sourced from Olympics.com) <a
+          href="https://en.wikipedia.org/wiki/2020_Summer_Olympics_medal_table">(1)</a><a
+          href="https://en.wikipedia.org/wiki/2016_Summer_Olympics_medal_table">(2)</a><a
+          href="https://en.wikipedia.org/wiki/2012_Summer_Olympics_medal_table">(3)</a><a
+          href="https://en.wikipedia.org/wiki/2020_Summer_Olympics#Number_of_athletes_by_National_Olympic_Committee">(4)</a><a
+          href="https://en.wikipedia.org/wiki/2016_Summer_Olympics#Number_of_athletes_by_National_Olympic_Committee">(5)</a><a
+          href="https://en.wikipedia.org/wiki/2012_Summer_Olympics#Number_of_athletes_by_National_Olympic_Committee">(6)</a>
+      </p>
+      <p>World Bank <a href="https://data.worldbank.org/indicator/NY.GDP.PCAP.KD">(1)</a><a
+          href="https://data.worldbank.org/indicator/BX.GSR.TOTL.CD">(2)</a></p>
+      <p>Yahoo Finance <a href="https://finance.yahoo.com/quote/V/">(1)</a><a
+          href="https://finance.yahoo.com/quote/TM/">(2)</a><a href="https://finance.yahoo.com/quote/ABNB/">(3)</a><a
+          href="https://finance.yahoo.com/quote/PG/">(4)</a><a href="https://finance.yahoo.com/quote/KO/">(5)</a><a
+          href="https://finance.yahoo.com/quote/INTC/">(6)</a><a href="https://finance.yahoo.com/quote/BRDCY/">(7)</a><a
+          href="https://finance.yahoo.com/quote/PCRFY/">(8)</a></p>
     </div>
 
   </section>
+  <!--This allows the loading screen to fade out after a few seconds of loading the content-->
   <script src="main.js"></script>
 </body>
 
