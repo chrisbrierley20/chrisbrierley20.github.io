@@ -1,0 +1,36 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://data.police.uk/api/crimes-street/all-crime?lat=51.0008716&lng=-0.0834517"
+  },
+  "transform": [{"calculate": "1", "as": "crime"}],
+  "mark": {"type": "arc", "innerRadius": 50},
+  "width": 200,
+  "height": 300,
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "title": {
+    "text": "Crimes in Vicinity of Haywards Heath, Mid Sussex",
+    "subtitle": "Reported crimes by type reported (November 2021). Source: UK Police.",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#FFFFFF",
+    "subtitleColor": "#B3B3B3"
+  },
+  "encoding": {
+    "theta": {"aggregate": "sum", "field": "crime", "type": "quantitative"},
+    "color": {
+      "field": "category",
+      "title": null,
+      "type": "ordinal",
+      "scale": {"scheme": "plasma"},
+      "legend": {
+        "direction": "vertical",
+        "title": "Category",
+        "labelColor": "#FEFEFE",
+        "titleColor": "#FEFEFE"
+      }
+    },
+    "tooltip": [{"field": "category"}, {"field": "crime", "aggregate": "sum"}]
+  }
+}
