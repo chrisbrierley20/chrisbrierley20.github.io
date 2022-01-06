@@ -39,7 +39,7 @@
 
 <body>
 
-
+  <!--These lines allow my loading screen to show up-->
   <div class="loader">
     <span></span>
     <span></span>
@@ -104,6 +104,12 @@
       <p>Chris Brierley</p>
 
       <h2>Olympinomics - The Economic Impacts of the Olympic Games</h2>
+
+      <h3>Introduction</h3>
+      <p>This project aims to investigate various macro and microeconomic impacts the Olympic games can have on host
+        nations, competitors and firms alike. Ultimately, this results in hopefully deciding whether hosting or
+        sponsoring the Olympics is an economically viable strategy on improving various economic indicators. </p>
+
       <h3>Does being a part of the Olympic Partner Programme affect a firm's stock price?</h3>
 
       <div class="container">
@@ -125,6 +131,8 @@
           </script>
         </div>
       </div>
+
+      <h3>The data I used and how I accessed it</h3>
 
       <h3>Do richer countries win more medals at the Olympics?</h3>
 
@@ -150,6 +158,9 @@
         </div>
       </div>
 
+
+      <h3>Conclusions (Part 1)</h3>
+
       <h3>Exports - Do Rose and Spiegel's (2011) findings on Olympic hosts and exports still hold today?</h3>
 
       <div class="container">
@@ -173,6 +184,39 @@
           </script>
         </div>
       </div>
+
+      <h3>Conclusions (Part 2)</h3>
+
+      <h3>Looking ahead - Will the Euro appreciate against the Yen following the announcement of the Paris 2024 games?
+      </h3>
+
+      <div class="container">
+        <!--Chart 7 -->
+        <div class="chart rgb" id="chart7">
+          <script>
+            var myChart7 = "chart22_Future.json";
+            vegaEmbed('#chart7', myChart7);
+          </script>
+        </div>
+      </div>
+
+      <h3>Challenges in data cleaning/analysis and how I overcame them</h3>
+      <p>By far the greatest challenge I faced when cleaning data was with the Exchange Rate Index chart. This required
+        taking daily exchange rate data of USD to 1 unit of local currency from FRED for the 5 previous currencies of
+        Olympic hosts between 2000 and 2021 and converting to an index. I then created a separate Olympic index inspired
+        by Goldman Sachs (2012) (https://www.goldmansachs.com/insights/archive/archive-pdfs/olympics-and-economics-.pdf)
+        which follows the currency of an Olympic host from 4 years prior to the day of the closing ceremony before
+        changing to the next currency. Furthermore, using daily data would make the chart almost illegible, so I had to
+        use Excel filters to only include the closest date to the first of the month, thereby now only using monthly
+        data.</p>
+      <p>There were also problems with scraping Wikipedia in Python for Olympic medal tables and number of athletes. This
+        is because for each year, the columns in each table would differ considerably. Time was therefore spent manually
+        inputting into Python which rows should be deleted from each unique table. Combining these finalised tables into
+        one final spreadsheet was also particularly difficult when purely using Python, so I instead opted to use Excel
+        to make my final, cleaned spreadsheet.</p>
+      
+
+      <h3>List of data sources:</h3>
 
     </div>
 
