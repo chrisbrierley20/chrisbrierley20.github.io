@@ -1,0 +1,52 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://app.sportdataapi.com/api/v1/soccer/matches?apikey=263ad4c0-6f34-11ec-9f8a-95db22fed9ff&season_id=1980&date_from=2021-08-13",
+    "format": {"type": "json", "property": "data"}
+  },
+  "title": {
+    "text": "Premier League - Liverpool FC Goals at Anfield",
+    "subtitle": [
+      "Goals scored at home, 21/22 season",
+      "Source: Sport Data API"
+    ],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "#FEFEFE",
+    "subtitleColor": "#B3B3B3"
+  },
+  "transform": [
+    {"filter": {"field": "home_team.name", "oneOf": ["Liverpool FC"]}}
+  ],
+  "mark": {"type": "bar", "color": "#C8102E"},
+  "config": {"background": "#404040", "view": {"stroke": "transparent"}},
+  "height": 300,
+  "width": 315,
+  "encoding": {
+    "x": {
+      "field": "match_start",
+      "type": "temporal",
+      "title": null,
+      "axis": {
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
+    },
+    "y": {
+      "field": "stats.home_score",
+      "type": "quantitative",
+      "title": null,
+      "axis": {
+        "grid": false,
+        "domainColor": "#B3B3B3",
+        "labelColor": "#FFFFFF",
+        "tickColor": "#B3B3B3",
+        "gridColor": "black"
+      }
+    }
+  }
+}
