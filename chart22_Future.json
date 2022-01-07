@@ -15,7 +15,7 @@
   },
   "config": {"background": "#404040", "view": {"stroke": "transparent"}},
   "height": 300,
-  "width": 300,
+  "width": 285,
   "mark": {"type": "line", "point": false, "clip": true, "color": "#EA8976"},
   "encoding": {
     "x": {

@@ -19,6 +19,25 @@
   <link rel="manifest" href="/site.webmanifest">
 
   <style>
+    a:link {
+      text-decoration: underline;
+      color: #B3B3B3;
+    }
+
+    a:visited {
+      text-decoration: underline;
+      color: #B3B3B3;
+    }
+
+    a:hover {
+      text-decoration: none;
+      color: #B3B3B3;
+    }
+
+    a:active {
+      text-decoration: none;
+      color: #B3B3B3;
+    }
     @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300&display=swap');
   </style>
 
@@ -107,8 +126,8 @@
       <p>This is the first of 3 charts embedded into my website. The first two were given to us in class, while the
         third chart was taken from the RapidCharts GitHub repository.</p>
       <p>Chart 1 looks at how many Covid-19 cases were reported across different UK regions.</p>
-      <div class="container">
 
+      <div class="container">
         <!--Chart 1 -->
         <div class="chart rgb" id="chart1">
           <script>
@@ -117,6 +136,8 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart1_covidUKRegions.json</p>
 
       <p>Chart 2 shows how UK productivity has changed between 1971 and 2021.</p>
       <div class="container">
@@ -128,6 +149,8 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart2_ukProductivity.json</p>
 
       <p>The third chart shows how the price of ETH has changed since 2016. Use the start/end year sliders to change the
         time period shown for the chart.</p>
@@ -140,6 +163,8 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart3_ether.json</p>
 
       <h3>Week 2 - Hosting Data</h3>
       <p>I learned this week two key routes of accessing data: using an API and saving CSV files to my GitHub
@@ -155,6 +180,8 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart4_API.json</p>
 
       <p>Using the same regions as before, this chart now uses CSV data saved to my GitHub repository that shows how
         each region has issued second doses of Covid-19 vaccinations.</p>
@@ -167,6 +194,9 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart5_raw.json</p>
+      <p>cum_second_jab.csv</p>
 
       <h3>Week 3 - Editing data and writing JSON by hand</h3>
       <p>This week involved using "in-line" JSON data that I wrote, as well as manipulating CSV data stored locally in
@@ -181,6 +211,8 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart6_productivity.json</p>
 
       <p>In this next chart, I manipulated two World Bank data sets - one for population and one for GDP in constant
         2010 US$, and combined them to find the GDP per capita for Brazil between 1960 and 2020.</p>
@@ -193,6 +225,9 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart7_brazilGDP.json</p>
+      <p>Brazil_GDP.csv</p>
 
       <h3>Week 4 - API driven charts</h3>
       <p>I have signed up and gained access to new, separate APIs that have not been used so far in my portfolio.</p>
@@ -206,6 +241,8 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart8_CocaColaAPI.json</p>
 
       <p>I have also used the UK Police API to gather data on the amount and type of crimes committed in Haywards Heath.</p>
       <div class="container">
@@ -217,6 +254,8 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart9_Crime.json</p>
 
       <h3>Week 5 - Using Python loops to make multiple downloads from APIs</h3>
       <p>I built my first mini-dashboard this week, whereby I used loops on Python to download data from four datasets
@@ -231,6 +270,10 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart10_BrazilCPI.json</p>
+      <p>FREDweek5.ipynb</p>
+      <p>BrazilCPI.json</p>
 
       <p>The second chart now shows the exchange rate between Brazilian Reals to One U.S. Dollar.</p>
       <div class="container">
@@ -242,6 +285,10 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart11_BrazilEX.json</p>
+      <p>FREDweek5.ipynb</p>
+      <p>BrazilEX.json</p>
 
       <p>This chart now looks at Japan's Consumer Price Index over time.</p>
       <div class="container">
@@ -253,6 +300,10 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart12_JapanCPI.json</p>
+      <p>FREDweek5.ipynb</p>
+      <p>JapanCPI.json</p>
 
       <p>The final chart shows Japan's unemployment rate.</p>
       <div class="container">
@@ -264,6 +315,10 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart13_JapanUnemployment.json</p>
+      <p>FREDweek5.ipynb</p>
+      <p>JapanUnemployment.json</p>
 
       <h3>Week 6&7 - Using Scrapers</h3>
       <p>This week, I scraped an Olympic medal table from Wikipedia using Pandas in Python to find relevant data to then
@@ -277,6 +332,10 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart14_medals.json</p>
+      <p>Wiki_Scraper.ipynb</p>
+      <p>medal_table.csv</p>
 
       <h3>Week 8 - Talking Economics Conference</h3>
       <p>Anna Valero from LSE's Centre for Economic Performance stated that "We have seen a decrease in the volume of
@@ -292,6 +351,8 @@
           </script>
         </div>
       </div>
+      <p>chart15_training.json</p>
+      <p>Training_Data.csv</p>
 
       <h3>Week 9 - Advanced Analytics</h3>
       <p>This week, I used python to combine multiple datasets for the stock prices of firms on the "Olympic Partner
@@ -307,6 +368,10 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart16_regression.json</p>
+      <p>Stock_Regression.ipynb</p>
+      <p>sponsor_stocks.csv</p>
 
       <h3>Week 10 - Interactive Charts</h3>
       <p>This week, I made two fully interactive charts using the Vega-Lite gallery. The first one highlights the series
@@ -321,6 +386,10 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart17_stocks.json</p>
+      <p>Stock_Regression.ipynb</p>
+      <p>project_sponsorship.csv</p>
 
       <p>This chart uses sliders that can change the minimum and maximum medals won at the Tokyo Olympics. The size of
         the bubble changes depending on how many athletes competed for that country at the Olympics, and the colour
@@ -334,6 +403,12 @@
           </script>
         </div>
       </div>
+      <p>Files used:</p>
+      <p>chart18_TokyoMedals.json</p>
+      <p>London.ipynb</p>
+      <p>Rio.ipynb</p>
+      <p>TokyoMedals.ipynb</p>
+      <p>Tokyo2020Data.csv</p>
 
     </div>
 
